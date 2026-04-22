@@ -8,12 +8,15 @@ import { BlogCard } from "@/components/blog/blog-card";
 import { retreatStyles, trustPoints, CITIES, CATEGORIES } from "@/lib/constants";
 import { getFeaturedRetreats } from "@/lib/retreats";
 import { getFeaturedPosts } from "@/lib/blog";
-import { ArrowRight, Sparkles, Star, MapPin, Shield } from "lucide-react";
+import { ArrowRight, CheckCircle2, Sparkles, Star, MapPin, Shield } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { IMAGES, BLUR_DATA_URL } from "@/lib/images";
 
 export const metadata: Metadata = {
+  title: "Best Yoga Retreats in Turkey 2026 | Compare Prices & Locations",
+  description:
+    "Find the best yoga retreats in Turkey — compare prices, locations and styles across Bodrum, Fethiye, Antalya and Cappadocia. 2,300+ verified reviews. Free cancellation options.",
   alternates: { canonical: "/" }
 };
 
@@ -62,14 +65,27 @@ export default function Home() {
             Luxury Yoga Retreat Discovery · Turkey
           </p>
           <h1 className="text-4xl font-semibold tracking-tight text-stone-900 md:text-6xl">
-            Find your next retreat with precision, beauty, and calm certainty.
+            Best Yoga Retreats in Turkey
           </h1>
           <p className="max-w-xl text-lg leading-relaxed text-stone-600">
-            Yoga Retreat Turkey curates Turkey&apos;s most refined yoga and wellness stays — then matches
-            you in minutes with an AI concierge designed for real preferences.
+            Compare prices, locations and styles — find your perfect yoga retreat in Turkey in minutes.
           </p>
+          <div className="flex flex-col gap-2 text-sm text-stone-700">
+            <span className="flex items-center gap-2">
+              <CheckCircle2 size={15} className="text-emerald-500 shrink-0" />
+              2,300+ verified reviews
+            </span>
+            <span className="flex items-center gap-2">
+              <CheckCircle2 size={15} className="text-emerald-500 shrink-0" />
+              Free cancellation options
+            </span>
+            <span className="flex items-center gap-2">
+              <CheckCircle2 size={15} className="text-emerald-500 shrink-0" />
+              Hand-picked retreats only
+            </span>
+          </div>
           <div className="flex flex-wrap gap-3">
-            <AffiliateButton label="Explore Retreats" size="lg" />
+            <AffiliateButton label="Find My Retreat" size="lg" />
             <Link
               href="/match"
               className="inline-flex items-center rounded-full border border-stone-300 bg-white px-8 py-4 text-base font-medium text-stone-800 transition hover:bg-stone-100"
@@ -122,11 +138,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DESTINATIONS */}
+      {/* DESTINATIONS – Location SEO Block */}
       <section className="mx-auto w-full max-w-7xl px-4 py-16 md:px-6">
         <SectionHeader
           eyebrow="Turkey destinations"
-          title="Four regions. One unmistakable experience."
+          title="Best Yoga Retreat Locations in Turkey"
           description="From Aegean luxury to Cappadocian silence — each region brings its own energy to your practice."
         />
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -187,7 +203,142 @@ export default function Home() {
           ))}
         </div>
         <div className="mt-10 text-center">
-          <AffiliateButton label="See All Retreats on BookRetreats" size="lg" />
+          <AffiliateButton label="Compare Top Retreats" size="lg" />
+        </div>
+      </section>
+
+      {/* COMPARISON TABLE */}
+      <section className="border-y border-stone-200 bg-stone-50">
+        <div className="mx-auto w-full max-w-7xl px-4 py-16 md:px-6">
+          <SectionHeader
+            eyebrow="Compare retreats"
+            title="Top Yoga Retreats in Turkey at a Glance"
+            description="Side-by-side comparison to help you choose the right retreat for your goals, budget, and travel dates."
+          />
+          <div className="mt-8 overflow-x-auto rounded-2xl border border-stone-200 bg-white shadow-sm">
+            <table className="w-full text-sm text-left text-stone-700">
+              <thead className="bg-stone-100 text-xs uppercase tracking-wider text-stone-500">
+                <tr>
+                  <th className="px-5 py-4">Retreat</th>
+                  <th className="px-5 py-4">Location</th>
+                  <th className="px-5 py-4">Price / person</th>
+                  <th className="px-5 py-4">Duration</th>
+                  <th className="px-5 py-4">Rating</th>
+                  <th className="px-5 py-4">Style</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-stone-100">
+                {[
+                  { name: "Aegean Clarity Retreat", location: "Bodrum", price: "$2,100", duration: "7 days", rating: "4.9 ★", style: "Vinyasa + Restorative", slug: "aegean-clarity-bodrum" },
+                  { name: "Fethiye Surf + Flow Week", location: "Fethiye", price: "$1,650", duration: "6 days", rating: "4.8 ★", style: "Power Flow", slug: "fethiye-surf-flow-week" },
+                  { name: "Antalya Women's Sanctuary", location: "Antalya", price: "$1,890", duration: "5 days", rating: "4.95 ★", style: "Hatha + Yin", slug: "antalya-womens-sanctuary" },
+                  { name: "Cappadocia Breath & Silence", location: "Cappadocia", price: "$1,750", duration: "5 days", rating: "4.88 ★", style: "Pranayama + Yin", slug: "kapadokya-breath-and-silence" },
+                  { name: "Bodrum Luxe Yacht Retreat", location: "Bodrum Coast", price: "$3,200", duration: "5 days", rating: "4.99 ★", style: "Vinyasa", slug: "bodrum-luxe-yacht-retreat" }
+                ].map((row) => (
+                  <tr key={row.slug} className="hover:bg-stone-50 transition">
+                    <td className="px-5 py-4 font-medium text-stone-900">
+                      <Link href={`/retreats/${row.slug}`} className="hover:text-stone-600 transition">{row.name}</Link>
+                    </td>
+                    <td className="px-5 py-4">{row.location}</td>
+                    <td className="px-5 py-4 font-medium">{row.price}</td>
+                    <td className="px-5 py-4">{row.duration}</td>
+                    <td className="px-5 py-4 text-amber-600 font-medium">{row.rating}</td>
+                    <td className="px-5 py-4 text-stone-500">{row.style}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-6 text-center">
+            <Link href="/retreats" className="text-sm font-medium text-stone-700 hover:text-stone-900 transition">
+              Browse all retreats →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW WE SELECT – E-E-A-T Block */}
+      <section className="mx-auto w-full max-w-7xl px-4 py-16 md:px-6">
+        <div className="md:grid md:grid-cols-2 md:gap-12 md:items-start">
+          <div>
+            <SectionHeader
+              eyebrow="Our editorial standard"
+              title="How We Select the Best Yoga Retreats in Turkey"
+              description="Every retreat on this platform is manually reviewed before it appears. We do not list on volume — we list on quality."
+            />
+            <ul className="mt-8 space-y-4">
+              {[
+                { label: "Accommodation quality", detail: "We inspect room standards, cleanliness, privacy, and amenities." },
+                { label: "Instructor experience", detail: "Every teacher is verified for credentials, lineage, and teaching continuity." },
+                { label: "Guest reviews", detail: "Only retreats with a sustained 4.6+ rating from verified bookings qualify." },
+                { label: "Location & environment", detail: "Setting, safety, accessibility, and natural surroundings are assessed on-site or via trusted hosts." },
+                { label: "Overall experience quality", detail: "From arrival to departure — we evaluate service touchpoints, meal quality, and holistic flow." }
+              ].map((item) => (
+                <li key={item.label} className="flex gap-3">
+                  <CheckCircle2 size={18} className="text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-medium text-stone-900">{item.label}</p>
+                    <p className="text-sm text-stone-500">{item.detail}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="mt-10 md:mt-0 grid gap-4">
+            <div className="rounded-2xl border border-stone-200 bg-stone-50 p-6">
+              <p className="text-3xl font-semibold text-stone-900">12</p>
+              <p className="text-sm text-stone-600 mt-1">Curated retreats — every listing hand-reviewed</p>
+            </div>
+            <div className="rounded-2xl border border-stone-200 bg-stone-50 p-6">
+              <p className="text-3xl font-semibold text-stone-900">4.7</p>
+              <p className="text-sm text-stone-600 mt-1">Average guest rating across all retreats</p>
+            </div>
+            <div className="rounded-2xl border border-stone-200 bg-stone-50 p-6">
+              <p className="text-3xl font-semibold text-stone-900">2,300+</p>
+              <p className="text-sm text-stone-600 mt-1">Verified guest reviews from real bookings</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PRICE BLOCK */}
+      <section className="border-y border-stone-200 bg-stone-50">
+        <div className="mx-auto w-full max-w-7xl px-4 py-16 md:px-6">
+          <SectionHeader
+            eyebrow="Budgeting your trip"
+            title="How Much Do Yoga Retreats in Turkey Cost?"
+            description="Turkey offers exceptional value compared to Bali, Portugal, or the Maldives. Here's what to expect at each price tier."
+          />
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {[
+              {
+                tier: "Budget",
+                range: "$600 – $1,200",
+                description: "Shared rooms, group classes, simple local meals. Great for first-time retreat guests and longer stays.",
+                badge: "Best value"
+              },
+              {
+                tier: "Mid-range",
+                range: "$1,200 – $2,000",
+                description: "Private or semi-private rooms, smaller groups, quality accommodation and full meal programs.",
+                badge: "Most popular"
+              },
+              {
+                tier: "Luxury",
+                range: "$2,000 – $4,000+",
+                description: "Boutique villas, yacht experiences, private transfers, personalised programs, and premium teaching.",
+                badge: "Premium"
+              }
+            ].map((tier) => (
+              <div key={tier.tier} className="rounded-2xl border border-stone-200 bg-white p-6">
+                <span className="inline-block rounded-full bg-stone-100 px-3 py-1 text-xs font-medium text-stone-600 mb-3">{tier.badge}</span>
+                <p className="text-xl font-semibold text-stone-900">{tier.tier}</p>
+                <p className="text-2xl font-bold text-stone-800 mt-1">{tier.range}</p>
+                <p className="mt-3 text-sm text-stone-600 leading-relaxed">{tier.description}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-4 text-xs text-stone-400">Prices are per person for the full retreat duration and include accommodation and meals unless otherwise noted.</p>
         </div>
       </section>
 
@@ -237,10 +388,10 @@ export default function Home() {
               <Sparkles size={14} /> AI Concierge
             </p>
             <h3 className="text-3xl font-semibold tracking-tight text-stone-900">
-              Tell us your preferences. Get your shortlist in under a minute.
+              Answer 5 quick questions and get your perfect yoga retreat in Turkey in under 60 seconds.
             </h3>
             <p className="mt-3 text-stone-600">
-              Dates, budget, vibe, room style, and wellness focus — we instantly map to your best-fit retreats.
+              Dates, budget, yoga style, room type, and wellness focus — our AI instantly maps your preferences to the best-fit retreats on our platform.
             </p>
           </div>
           <Link
@@ -267,6 +418,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TRUST SIGNALS */}
+      <section className="border-y border-stone-200 bg-stone-50">
+        <div className="mx-auto w-full max-w-7xl px-4 py-12 md:px-6">
+          <h3 className="text-xl font-semibold text-stone-900 mb-6 text-center">Why Travellers Trust Us</h3>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { icon: "✔", label: "Real guest reviews", detail: "Every review is from a verified booking — no anonymous submissions." },
+              { icon: "✔", label: "Verified hosts only", detail: "All retreat hosts are vetted before listing. We remove listings that fall below standards." },
+              { icon: "✔", label: "Secure booking partners", detail: "Reservations are processed through trusted, PCI-compliant booking platforms." },
+              { icon: "✔", label: "Free cancellation options", detail: "Most retreats offer flexible cancellation — clearly shown before you book." }
+            ].map((item) => (
+              <div key={item.label} className="rounded-2xl border border-stone-200 bg-white p-5">
+                <p className="text-lg font-semibold text-emerald-600 mb-1">{item.icon} {item.label}</p>
+                <p className="text-sm text-stone-500 leading-relaxed">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* BLOG */}
       {posts.length > 0 && (
         <section className="border-t border-stone-200 bg-stone-50">
@@ -279,7 +450,16 @@ export default function Home() {
             />
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               {posts.map((post) => (
-                <BlogCard key={post.slug} post={post} />
+                <div key={post.slug} className="flex flex-col">
+                  <BlogCard post={post} />
+                  <div className="mt-3 px-1">
+                    <AffiliateButton
+                      label="See retreats matching this guide →"
+                      size="sm"
+                      className="text-xs"
+                    />
+                  </div>
+                </div>
               ))}
             </div>
             <div className="mt-6">
@@ -329,17 +509,50 @@ export default function Home() {
         />
       </section>
 
+      {/* INTERNAL LINKING – SEO Hub */}
+      <section className="mx-auto w-full max-w-7xl px-4 py-12 md:px-6">
+        <div className="rounded-2xl border border-stone-200 bg-white p-6 md:p-8">
+          <h3 className="text-lg font-semibold text-stone-900 mb-5">Explore More Yoga Retreats in Turkey</h3>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 text-sm">
+            <Link href="/yoga-retreats/turkey/mugla" className="flex items-center gap-2 text-stone-700 hover:text-stone-900 transition font-medium">
+              <ArrowRight size={14} className="text-stone-400" /> Best Yoga Retreats in Bodrum
+            </Link>
+            <Link href="/yoga-retreats/turkey/mugla" className="flex items-center gap-2 text-stone-700 hover:text-stone-900 transition font-medium">
+              <ArrowRight size={14} className="text-stone-400" /> Best Yoga Retreats in Fethiye
+            </Link>
+            <Link href="/yoga-retreats/turkey/antalya" className="flex items-center gap-2 text-stone-700 hover:text-stone-900 transition font-medium">
+              <ArrowRight size={14} className="text-stone-400" /> Yoga Retreats in Antalya
+            </Link>
+            <Link href="/yoga-retreats/turkey/cappadocia" className="flex items-center gap-2 text-stone-700 hover:text-stone-900 transition font-medium">
+              <ArrowRight size={14} className="text-stone-400" /> Yoga Retreats in Cappadocia
+            </Link>
+            <Link href="/yoga-retreats/turkey/luxury" className="flex items-center gap-2 text-stone-700 hover:text-stone-900 transition font-medium">
+              <ArrowRight size={14} className="text-stone-400" /> Luxury Yoga Retreats Turkey
+            </Link>
+            <Link href="/yoga-retreats/turkey/detox" className="flex items-center gap-2 text-stone-700 hover:text-stone-900 transition font-medium">
+              <ArrowRight size={14} className="text-stone-400" /> Affordable Yoga Retreats Turkey
+            </Link>
+            <Link href="/yoga-retreats/turkey/womens" className="flex items-center gap-2 text-stone-700 hover:text-stone-900 transition font-medium">
+              <ArrowRight size={14} className="text-stone-400" /> Women&apos;s Yoga Retreats Turkey
+            </Link>
+            <Link href="/retreats" className="flex items-center gap-2 text-stone-700 hover:text-stone-900 transition font-medium">
+              <ArrowRight size={14} className="text-stone-400" /> All Inclusive Yoga Retreats Turkey
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FINAL CTA */}
       <section className="mx-auto w-full max-w-7xl px-4 pb-20 md:px-6">
         <div className="rounded-3xl border border-stone-200 bg-white p-8 text-center">
           <h3 className="text-3xl font-semibold tracking-tight text-stone-900">
-            Ready to choose your retreat season?
+            Ready to find the best yoga retreat in Turkey for you?
           </h3>
           <p className="mx-auto mt-3 max-w-2xl text-stone-600">
-            Browse hand-picked options now or let our AI concierge prepare your personalised shortlist.
+            Browse hand-picked retreats now or let our AI concierge prepare your personalised shortlist in under a minute.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <AffiliateButton label="Browse Retreats" size="lg" />
+            <AffiliateButton label="Browse All Retreats" size="lg" />
             <Link href="/match" className="rounded-full border border-stone-300 px-8 py-4 text-base font-medium text-stone-800 transition hover:bg-stone-100">
               Get AI-Matched
             </Link>
