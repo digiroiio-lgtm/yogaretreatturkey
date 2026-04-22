@@ -205,8 +205,8 @@ export default async function RetreatDetailPage({ params }: { params: Promise<{ 
             },
             provider: {
               "@type": "Organization",
-              name: "Yoga Retreats Turkey",
-              url: "https://yogaretreatsturkey.com"
+              name: "Yoga Retreat Turkey",
+              url: "https://yogaretreatturkey.com"
             }
           })
         }}

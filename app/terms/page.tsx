@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Terms", description: "Terms and conditions placeholder for Yoga Retreats Turkey." };
+export const metadata: Metadata = { title: "Terms", description: "Terms and conditions placeholder for Yoga Retreat Turkey." };
 
 export default function TermsPage() {
   return (

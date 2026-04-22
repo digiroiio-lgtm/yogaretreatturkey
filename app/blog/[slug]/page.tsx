@@ -45,7 +45,7 @@ export default async function BlogPostPage({ params }: Props) {
     "@type": "Article",
     headline: post.title,
     description: post.metaDescription,
-    image: [`https://yogaretreatsturkey.com${post.coverImage}`],
+    image: [`https://yogaretreatturkey.com${post.coverImage}`],
     datePublished: post.publishedAt,
     author: {
       "@type": "Person",
@@ -54,8 +54,8 @@ export default async function BlogPostPage({ params }: Props) {
     },
     publisher: {
       "@type": "Organization",
-      name: "Yoga Retreats Turkey",
-      url: "https://yogaretreatsturkey.com"
+      name: "Yoga Retreat Turkey",
+      url: "https://yogaretreatturkey.com"
     }
   };
 

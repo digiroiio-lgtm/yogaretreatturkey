@@ -41,8 +41,8 @@ export default function Home() {
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Yoga Retreats Turkey",
-    url: "https://yogaretreatsturkey.com",
+    name: "Yoga Retreat Turkey",
+    url: "https://yogaretreatturkey.com",
     description:
       "Curated luxury yoga retreats in Turkey with AI-powered matching and verified host standards."
   };
@@ -59,7 +59,7 @@ export default function Home() {
             Find your next retreat with precision, beauty, and calm certainty.
           </h1>
           <p className="max-w-xl text-lg leading-relaxed text-stone-600">
-            Yoga Retreats Turkey curates Turkey&apos;s most refined yoga and wellness stays — then matches
+            Yoga Retreat Turkey curates Turkey&apos;s most refined yoga and wellness stays — then matches
             you in minutes with an AI concierge designed for real preferences.
           </p>
           <div className="flex flex-wrap gap-3">

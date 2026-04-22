@@ -101,7 +101,7 @@ export default async function CityTypePage({ params }: Props) {
       "@type": "ListItem",
       position: i + 1,
       name: r.title,
-      url: `https://yogaretreatsturkey.com/retreats/${r.slug}`
+      url: `https://yogaretreatturkey.com/retreats/${r.slug}`
     }))
   };
 

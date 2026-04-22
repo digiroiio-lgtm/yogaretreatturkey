@@ -11,11 +11,11 @@ import { CITIES, CATEGORIES, RETREAT_TYPES } from "@/lib/constants";
 import { MapPin, Star } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Yoga Retreats Turkey | Best Turkish Yoga & Wellness Retreats 2026",
+  title: "Yoga Retreat Turkey | Best Turkish Yoga & Wellness Retreats 2026",
   description:
     "Find the best yoga retreats in Turkey for 2026 — luxury Aegean villas, spiritual Cappadocia experiences, detox programs, and women's sanctuaries. 4.7 stars, 2,300+ reviews.",
   openGraph: {
-    title: "Yoga Retreats Turkey | Curated Wellness Stays 2026",
+    title: "Yoga Retreat Turkey | Curated Wellness Stays 2026",
     description:
       "Luxury yoga retreats across Turkey's finest destinations. AI-matched, verified, and curated.",
     type: "website"
@@ -57,8 +57,8 @@ export default function TurkeyHubPage() {
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Yoga Retreats Turkey",
-    url: "https://yogaretreatsturkey.com",
+    name: "Yoga Retreat Turkey",
+    url: "https://yogaretreatturkey.com",
     description:
       "Curated luxury yoga retreat discovery for Turkey with AI-powered matching and verified host standards."
   };
@@ -72,7 +72,7 @@ export default function TurkeyHubPage() {
       "@type": "ListItem",
       position: i + 1,
       name: r.title,
-      url: `https://yogaretreatsturkey.com/retreats/${r.slug}`
+      url: `https://yogaretreatturkey.com/retreats/${r.slug}`
     }))
   };
 

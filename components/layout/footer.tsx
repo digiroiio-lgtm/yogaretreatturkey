@@ -6,14 +6,14 @@ export function Footer() {
     <footer className="mt-24 border-t border-stone-200 bg-[#f5f1ea]">
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 py-12 md:grid-cols-5 md:px-6">
         <div className="space-y-3 md:col-span-2">
-          <p className="text-xs uppercase tracking-[0.2em] text-stone-500">Yoga Retreats Turkey</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-stone-500">Yoga Retreat Turkey</p>
           <p className="max-w-md text-sm leading-relaxed text-stone-700">
             Curated luxury yoga retreats in Turkey, paired with AI-powered matching and trusted hosts.
             Over 2,300 verified reviews. Free cancellation available.
           </p>
           <div className="pt-2">
             <a
-              href="https://bookretreats.com/?a=fwfncwdpylkdjfqemjuf"
+              href="https://bookretreats.com/s/yoga-retreats/turkey?a=fwfncwdpylkdjfqemjuf"
               target="_blank"
               rel="nofollow sponsored"
               className="inline-flex items-center rounded-full bg-stone-900 px-5 py-2 text-sm font-medium text-white transition hover:bg-stone-700"
@@ -66,7 +66,7 @@ export function Footer() {
       </div>
       <div className="border-t border-stone-200 px-4 py-4 md:px-6">
         <p className="text-xs text-stone-400 text-center">
-          © 2026 Yoga Retreats Turkey. Retreat links are affiliate partnerships with BookRetreats.
+          © 2026 Yoga Retreat Turkey. Retreat links are affiliate partnerships with BookRetreats.
         </p>
       </div>
     </footer>

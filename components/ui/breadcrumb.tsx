@@ -11,7 +11,7 @@ export function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      ...(item.href ? { item: `https://yogaretreatsturkey.com${item.href}` } : {})
+      ...(item.href ? { item: `https://yogaretreatturkey.com${item.href}` } : {})
     }))
   };
 

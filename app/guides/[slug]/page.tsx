@@ -38,11 +38,11 @@ export default async function GuidePage({ params }: Props) {
     "@type": "Article",
     headline: guide.title,
     description: guide.metaDescription,
-    image: [`https://yogaretreatsturkey.com${guide.coverImage}`],
+    image: [`https://yogaretreatturkey.com${guide.coverImage}`],
     publisher: {
       "@type": "Organization",
-      name: "Yoga Retreats Turkey",
-      url: "https://yogaretreatsturkey.com"
+      name: "Yoga Retreat Turkey",
+      url: "https://yogaretreatturkey.com"
     }
   };
 
