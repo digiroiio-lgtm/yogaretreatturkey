@@ -493,6 +493,29 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TOP 10 PROMO BLOCK */}
+      <section className="mx-auto w-full max-w-7xl px-4 py-6 md:px-6">
+        <div className="rounded-3xl border border-stone-200 bg-stone-50 p-8 md:flex md:items-center md:justify-between gap-8">
+          <div className="max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.22em] text-stone-500 mb-2">Expert-curated · 2026 guide</p>
+            <h2 className="text-2xl font-semibold tracking-tight text-stone-900">
+              Top 10 Yoga Retreats in Turkey
+            </h2>
+            <p className="mt-2 text-stone-600">
+              Explore our expert-picked list of the best retreats in Turkey — compared by price, location, style, and guest rating.
+            </p>
+          </div>
+          <div className="mt-5 md:mt-0 shrink-0">
+            <Link
+              href="/top-10-yoga-retreats-turkey"
+              className="inline-flex items-center gap-2 rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-stone-700"
+            >
+              View Top 10 Retreats <ArrowRight size={14} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FINAL CTA */}
       <section className="mx-auto w-full max-w-7xl px-4 pb-20 md:px-6">
         <div className="rounded-3xl border border-stone-200 bg-white p-8 text-center">
