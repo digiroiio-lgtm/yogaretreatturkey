@@ -5,6 +5,7 @@
 export const FALLBACK_IMAGE = "/images/placeholder.jpeg";
 
 // 1×1 warm-stone GIF used as blur placeholder for all next/image instances
+// Color: approx. #F5F0E6 (RGB 245, 240, 230 — warm stone / off-white)
 export const BLUR_DATA_URL =
   "data:image/gif;base64,R0lGODlhAQABAIAAAPXw6AAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==";
 

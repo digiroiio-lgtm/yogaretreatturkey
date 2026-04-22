@@ -82,3 +82,65 @@ export const CITY_LOCATION_MAP: Record<string, string[]> = {
   cappadocia: ["Cappadocia"],
   istanbul: ["Istanbul"]
 };
+
+// Comparison table: top retreat picks shown on the homepage
+export const HOMEPAGE_COMPARISON_RETREATS = [
+  { name: "Aegean Clarity Retreat", location: "Bodrum", price: "$2,100", duration: "7 days", rating: "4.9 ★", style: "Vinyasa + Restorative", slug: "aegean-clarity-bodrum" },
+  { name: "Fethiye Surf + Flow Week", location: "Fethiye", price: "$1,650", duration: "6 days", rating: "4.8 ★", style: "Power Flow", slug: "fethiye-surf-flow-week" },
+  { name: "Antalya Women's Sanctuary", location: "Antalya", price: "$1,890", duration: "5 days", rating: "4.95 ★", style: "Hatha + Yin", slug: "antalya-womens-sanctuary" },
+  { name: "Cappadocia Breath & Silence", location: "Cappadocia", price: "$1,750", duration: "5 days", rating: "4.88 ★", style: "Pranayama + Yin", slug: "kapadokya-breath-and-silence" },
+  { name: "Bodrum Luxe Yacht Retreat", location: "Bodrum Coast", price: "$3,200", duration: "5 days", rating: "4.99 ★", style: "Vinyasa", slug: "bodrum-luxe-yacht-retreat" }
+];
+
+// Selection criteria shown in the E-E-A-T "How We Select" block
+export const SELECTION_CRITERIA = [
+  { label: "Accommodation quality", detail: "We inspect room standards, cleanliness, privacy, and amenities." },
+  { label: "Instructor experience", detail: "Every teacher is verified for credentials, lineage, and teaching continuity." },
+  { label: "Guest reviews", detail: "Only retreats with a sustained 4.6+ rating from verified bookings qualify." },
+  { label: "Location & environment", detail: "Setting, safety, accessibility, and natural surroundings are assessed on-site or via trusted hosts." },
+  { label: "Overall experience quality", detail: "From arrival to departure — we evaluate service touchpoints, meal quality, and holistic flow." }
+];
+
+// Price tiers shown in the pricing transparency block
+export const PRICE_TIERS = [
+  {
+    tier: "Budget",
+    range: "$600 – $1,200",
+    description: "Shared rooms, group classes, simple local meals. Great for first-time retreat guests and longer stays.",
+    badge: "Best value"
+  },
+  {
+    tier: "Mid-range",
+    range: "$1,200 – $2,000",
+    description: "Private or semi-private rooms, smaller groups, quality accommodation and full meal programs.",
+    badge: "Most popular"
+  },
+  {
+    tier: "Luxury",
+    range: "$2,000 – $4,000+",
+    description: "Boutique villas, yacht experiences, private transfers, personalised programs, and premium teaching.",
+    badge: "Premium"
+  }
+];
+
+// Trust signals shown in the homepage trust block
+export const TRUST_SIGNALS = [
+  { icon: "✔", label: "Real guest reviews", detail: "Every review is from a verified booking — no anonymous submissions." },
+  { icon: "✔", label: "Verified hosts only", detail: "All retreat hosts are vetted before listing. We remove listings that fall below standards." },
+  { icon: "✔", label: "Secure booking partners", detail: "Reservations are processed through trusted, PCI-compliant booking platforms." },
+  { icon: "✔", label: "Free cancellation options", detail: "Most retreats offer flexible cancellation — clearly shown before you book." }
+];
+
+// Internal SEO links shown in the homepage hub block
+// Note: Bodrum and Fethiye are both within Muğla province and share the /mugla region page.
+// Separate city-level pages may be added in future; links updated accordingly when available.
+export const INTERNAL_SEO_LINKS = [
+  { href: "/yoga-retreats/turkey/mugla", label: "Best Yoga Retreats in Bodrum" },
+  { href: "/yoga-retreats/turkey/mugla", label: "Best Yoga Retreats in Fethiye & Muğla" },
+  { href: "/yoga-retreats/turkey/antalya", label: "Yoga Retreats in Antalya" },
+  { href: "/yoga-retreats/turkey/cappadocia", label: "Yoga Retreats in Cappadocia" },
+  { href: "/yoga-retreats/turkey/luxury", label: "Luxury Yoga Retreats Turkey" },
+  { href: "/yoga-retreats/turkey/detox", label: "Affordable Yoga Retreats Turkey" },
+  { href: "/yoga-retreats/turkey/womens", label: "Women's Yoga Retreats Turkey" },
+  { href: "/retreats", label: "All Inclusive Yoga Retreats Turkey" }
+];

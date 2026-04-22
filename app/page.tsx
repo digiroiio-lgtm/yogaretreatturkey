@@ -5,7 +5,7 @@ import { ReviewCard } from "@/components/retreats/review-card";
 import { SectionHeader } from "@/components/ui/section-header";
 import { AffiliateButton } from "@/components/ui/affiliate-button";
 import { BlogCard } from "@/components/blog/blog-card";
-import { retreatStyles, trustPoints, CITIES, CATEGORIES } from "@/lib/constants";
+import { retreatStyles, trustPoints, CITIES, CATEGORIES, HOMEPAGE_COMPARISON_RETREATS, SELECTION_CRITERIA, PRICE_TIERS, TRUST_SIGNALS, INTERNAL_SEO_LINKS } from "@/lib/constants";
 import { getFeaturedRetreats } from "@/lib/retreats";
 import { getFeaturedPosts } from "@/lib/blog";
 import { ArrowRight, CheckCircle2, Sparkles, Star, MapPin, Shield } from "lucide-react";
@@ -228,13 +228,7 @@ export default function Home() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-stone-100">
-                {[
-                  { name: "Aegean Clarity Retreat", location: "Bodrum", price: "$2,100", duration: "7 days", rating: "4.9 ★", style: "Vinyasa + Restorative", slug: "aegean-clarity-bodrum" },
-                  { name: "Fethiye Surf + Flow Week", location: "Fethiye", price: "$1,650", duration: "6 days", rating: "4.8 ★", style: "Power Flow", slug: "fethiye-surf-flow-week" },
-                  { name: "Antalya Women's Sanctuary", location: "Antalya", price: "$1,890", duration: "5 days", rating: "4.95 ★", style: "Hatha + Yin", slug: "antalya-womens-sanctuary" },
-                  { name: "Cappadocia Breath & Silence", location: "Cappadocia", price: "$1,750", duration: "5 days", rating: "4.88 ★", style: "Pranayama + Yin", slug: "kapadokya-breath-and-silence" },
-                  { name: "Bodrum Luxe Yacht Retreat", location: "Bodrum Coast", price: "$3,200", duration: "5 days", rating: "4.99 ★", style: "Vinyasa", slug: "bodrum-luxe-yacht-retreat" }
-                ].map((row) => (
+                {HOMEPAGE_COMPARISON_RETREATS.map((row) => (
                   <tr key={row.slug} className="hover:bg-stone-50 transition">
                     <td className="px-5 py-4 font-medium text-stone-900">
                       <Link href={`/retreats/${row.slug}`} className="hover:text-stone-600 transition">{row.name}</Link>
@@ -267,13 +261,7 @@ export default function Home() {
               description="Every retreat on this platform is manually reviewed before it appears. We do not list on volume — we list on quality."
             />
             <ul className="mt-8 space-y-4">
-              {[
-                { label: "Accommodation quality", detail: "We inspect room standards, cleanliness, privacy, and amenities." },
-                { label: "Instructor experience", detail: "Every teacher is verified for credentials, lineage, and teaching continuity." },
-                { label: "Guest reviews", detail: "Only retreats with a sustained 4.6+ rating from verified bookings qualify." },
-                { label: "Location & environment", detail: "Setting, safety, accessibility, and natural surroundings are assessed on-site or via trusted hosts." },
-                { label: "Overall experience quality", detail: "From arrival to departure — we evaluate service touchpoints, meal quality, and holistic flow." }
-              ].map((item) => (
+              {SELECTION_CRITERIA.map((item) => (
                 <li key={item.label} className="flex gap-3">
                   <CheckCircle2 size={18} className="text-emerald-500 shrink-0 mt-0.5" />
                   <div>
@@ -310,26 +298,7 @@ export default function Home() {
             description="Turkey offers exceptional value compared to Bali, Portugal, or the Maldives. Here's what to expect at each price tier."
           />
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {[
-              {
-                tier: "Budget",
-                range: "$600 – $1,200",
-                description: "Shared rooms, group classes, simple local meals. Great for first-time retreat guests and longer stays.",
-                badge: "Best value"
-              },
-              {
-                tier: "Mid-range",
-                range: "$1,200 – $2,000",
-                description: "Private or semi-private rooms, smaller groups, quality accommodation and full meal programs.",
-                badge: "Most popular"
-              },
-              {
-                tier: "Luxury",
-                range: "$2,000 – $4,000+",
-                description: "Boutique villas, yacht experiences, private transfers, personalised programs, and premium teaching.",
-                badge: "Premium"
-              }
-            ].map((tier) => (
+            {PRICE_TIERS.map((tier) => (
               <div key={tier.tier} className="rounded-2xl border border-stone-200 bg-white p-6">
                 <span className="inline-block rounded-full bg-stone-100 px-3 py-1 text-xs font-medium text-stone-600 mb-3">{tier.badge}</span>
                 <p className="text-xl font-semibold text-stone-900">{tier.tier}</p>
@@ -423,12 +392,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-4 py-12 md:px-6">
           <h3 className="text-xl font-semibold text-stone-900 mb-6 text-center">Why Travellers Trust Us</h3>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { icon: "✔", label: "Real guest reviews", detail: "Every review is from a verified booking — no anonymous submissions." },
-              { icon: "✔", label: "Verified hosts only", detail: "All retreat hosts are vetted before listing. We remove listings that fall below standards." },
-              { icon: "✔", label: "Secure booking partners", detail: "Reservations are processed through trusted, PCI-compliant booking platforms." },
-              { icon: "✔", label: "Free cancellation options", detail: "Most retreats offer flexible cancellation — clearly shown before you book." }
-            ].map((item) => (
+            {TRUST_SIGNALS.map((item) => (
               <div key={item.label} className="rounded-2xl border border-stone-200 bg-white p-5">
                 <p className="text-lg font-semibold text-emerald-600 mb-1">{item.icon} {item.label}</p>
                 <p className="text-sm text-stone-500 leading-relaxed">{item.detail}</p>
@@ -514,30 +478,11 @@ export default function Home() {
         <div className="rounded-2xl border border-stone-200 bg-white p-6 md:p-8">
           <h3 className="text-lg font-semibold text-stone-900 mb-5">Explore More Yoga Retreats in Turkey</h3>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 text-sm">
-            <Link href="/yoga-retreats/turkey/mugla" className="flex items-center gap-2 text-stone-700 hover:text-stone-900 transition font-medium">
-              <ArrowRight size={14} className="text-stone-400" /> Best Yoga Retreats in Bodrum
-            </Link>
-            <Link href="/yoga-retreats/turkey/mugla" className="flex items-center gap-2 text-stone-700 hover:text-stone-900 transition font-medium">
-              <ArrowRight size={14} className="text-stone-400" /> Best Yoga Retreats in Fethiye
-            </Link>
-            <Link href="/yoga-retreats/turkey/antalya" className="flex items-center gap-2 text-stone-700 hover:text-stone-900 transition font-medium">
-              <ArrowRight size={14} className="text-stone-400" /> Yoga Retreats in Antalya
-            </Link>
-            <Link href="/yoga-retreats/turkey/cappadocia" className="flex items-center gap-2 text-stone-700 hover:text-stone-900 transition font-medium">
-              <ArrowRight size={14} className="text-stone-400" /> Yoga Retreats in Cappadocia
-            </Link>
-            <Link href="/yoga-retreats/turkey/luxury" className="flex items-center gap-2 text-stone-700 hover:text-stone-900 transition font-medium">
-              <ArrowRight size={14} className="text-stone-400" /> Luxury Yoga Retreats Turkey
-            </Link>
-            <Link href="/yoga-retreats/turkey/detox" className="flex items-center gap-2 text-stone-700 hover:text-stone-900 transition font-medium">
-              <ArrowRight size={14} className="text-stone-400" /> Affordable Yoga Retreats Turkey
-            </Link>
-            <Link href="/yoga-retreats/turkey/womens" className="flex items-center gap-2 text-stone-700 hover:text-stone-900 transition font-medium">
-              <ArrowRight size={14} className="text-stone-400" /> Women&apos;s Yoga Retreats Turkey
-            </Link>
-            <Link href="/retreats" className="flex items-center gap-2 text-stone-700 hover:text-stone-900 transition font-medium">
-              <ArrowRight size={14} className="text-stone-400" /> All Inclusive Yoga Retreats Turkey
-            </Link>
+            {INTERNAL_SEO_LINKS.map((link) => (
+              <Link key={link.label} href={link.href} className="flex items-center gap-2 text-stone-700 hover:text-stone-900 transition font-medium">
+                <ArrowRight size={14} className="text-stone-400" /> {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </section>
