@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { InquiryForm } from "@/components/forms/inquiry-form";
+import { siteConfig } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -30,11 +31,11 @@ export default function ContactPage() {
             Ask about dates, retreat fit, room options, or host credentials. We’ll guide you with clear recommendations.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link href="https://wa.me/905551112233" className="rounded-full border border-emerald-300 bg-emerald-50 px-5 py-2 text-sm font-medium text-emerald-800">
+            <Link href={`https://wa.me/${siteConfig.contact.whatsappNumber}`} className="rounded-full border border-emerald-300 bg-emerald-50 px-5 py-2 text-sm font-medium text-emerald-800">
               WhatsApp concierge
             </Link>
-            <Link href="mailto:hello@saffronretreats.com" className="rounded-full border border-stone-300 bg-white px-5 py-2 text-sm font-medium text-stone-800">
-              hello@saffronretreats.com
+            <Link href={`mailto:${siteConfig.contact.email}`} className="rounded-full border border-stone-300 bg-white px-5 py-2 text-sm font-medium text-stone-800">
+              {siteConfig.contact.email}
             </Link>
           </div>
           <FAQAccordion items={items} />

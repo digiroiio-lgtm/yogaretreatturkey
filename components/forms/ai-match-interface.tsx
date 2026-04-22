@@ -42,8 +42,8 @@ export function AIMatchInterface() {
         if (retreat.wellnessExtras.some((extra) => extra.toLowerCase().includes(prefs.healing.toLowerCase()))) score += 1;
         if (
           (prefs.setting === "Beach" && retreat.tags.includes("beachfront")) ||
-          (prefs.setting === "Jungle/Ubud" && retreat.tags.includes("healing")) ||
-          (prefs.setting === "Canggu/Social" && retreat.tags.includes("community"))
+          (prefs.setting === "Nature / Ubud-style calm" && retreat.tags.includes("healing")) ||
+          (prefs.setting === "Social / Canggu-style energy" && retreat.tags.includes("community"))
         ) {
           score += 1;
         }
@@ -119,8 +119,8 @@ export function AIMatchInterface() {
             Setting preference
             <select className="mt-1 w-full rounded-xl border border-stone-200 px-3 py-2" value={prefs.setting} onChange={(e) => update("setting", e.target.value)}>
               <option>Beach</option>
-              <option>Jungle/Ubud</option>
-              <option>Canggu/Social</option>
+              <option>Nature / Ubud-style calm</option>
+              <option>Social / Canggu-style energy</option>
             </select>
           </label>
         </div>
