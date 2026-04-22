@@ -1,6 +1,7 @@
 // SEO-friendly image mapping — actual filenames kept internal; clean semantic keys used throughout code
 // DO NOT expose raw filenames in alt text, structured data, or metadata
 
+// Confirmed to exist in /public/images/
 export const FALLBACK_IMAGE = "/images/placeholder.jpeg";
 
 // 1×1 warm-stone GIF used as blur placeholder for all next/image instances

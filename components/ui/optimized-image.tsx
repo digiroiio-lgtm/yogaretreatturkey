@@ -12,17 +12,20 @@ export function OptimizedImage({
   fallback = FALLBACK_IMAGE,
   src,
   blurDataURL = BLUR_DATA_URL,
-  placeholder = "blur",
+  placeholder,
   ...props
 }: OptimizedImageProps) {
   const [imgSrc, setImgSrc] = useState(src);
+
+  // Only use blur placeholder when blurDataURL is available
+  const resolvedPlaceholder = placeholder ?? (blurDataURL ? "blur" : "empty");
 
   return (
     <Image
       {...props}
       src={imgSrc}
       blurDataURL={blurDataURL}
-      placeholder={placeholder}
+      placeholder={resolvedPlaceholder}
       onError={() => setImgSrc(fallback)}
     />
   );

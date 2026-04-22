@@ -64,17 +64,20 @@ export default async function RetreatDetailPage({ params }: { params: Promise<{ 
           />
         </div>
         <div className="grid gap-4">
-          {retreat.images.slice(1, 3).map((image, i) => (
-            <div key={image} className="relative h-[200px] overflow-hidden rounded-3xl border border-stone-200">
-              <OptimizedImage
-                src={image}
-                alt={`${retreat.title} yoga retreat accommodation and setting in ${retreat.locationArea} — view ${i + 2}`}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-            </div>
-          ))}
+          {retreat.images.slice(1, 3).map((image, i) => {
+            const galleryLabels = ["accommodation and rooms", "outdoor setting and views"];
+            return (
+              <div key={image} className="relative h-[200px] overflow-hidden rounded-3xl border border-stone-200">
+                <OptimizedImage
+                  src={image}
+                  alt={`${retreat.title} yoga retreat ${galleryLabels[i] ?? "gallery"} in ${retreat.locationArea} Turkey`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+            );
+          })}
         </div>
       </section>
 
