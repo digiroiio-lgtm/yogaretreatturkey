@@ -157,7 +157,7 @@ export default function TurkeyHubPage() {
 
       <section className="border-y border-stone-200 bg-stone-50">
         <div className="mx-auto w-full max-w-7xl px-4 py-12 md:px-6">
-          <h2 className="text-2xl font-semibold text-stone-900 mb-8">Browse by Retreat Type</h2>
+          <h3 className="text-2xl font-semibold text-stone-900 mb-8">Browse by Retreat Type</h3>
           <div className="grid gap-4 sm:grid-cols-3">
             {CATEGORIES.map((cat) => (
               <Link
@@ -175,7 +175,7 @@ export default function TurkeyHubPage() {
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-4 py-14 md:px-6">
-        <h2 className="text-2xl font-semibold text-stone-900 mb-2">Featured Turkey Retreats</h2>
+        <h3 className="text-2xl font-semibold text-stone-900 mb-2">Featured Turkey Retreats</h3>
         <p className="text-stone-600 mb-8">
           Editor-curated selections across Turkey — verified for quality, safety, and host standards.
         </p>
@@ -192,7 +192,7 @@ export default function TurkeyHubPage() {
       {posts.length > 0 && (
         <section className="border-t border-stone-200 bg-stone-50">
           <div className="mx-auto w-full max-w-7xl px-4 py-14 md:px-6">
-            <h2 className="text-2xl font-semibold text-stone-900 mb-2">Turkey Retreat Guides</h2>
+            <h3 className="text-2xl font-semibold text-stone-900 mb-2">Turkey Retreat Guides</h3>
             <p className="text-stone-600 mb-8">Expert insights for planning your Turkey yoga retreat.</p>
             <div className="grid gap-6 md:grid-cols-3">
               {posts.map((post) => (
@@ -209,9 +209,9 @@ export default function TurkeyHubPage() {
       )}
 
       <section className="mx-auto w-full max-w-4xl px-4 py-14 md:px-6">
-        <h2 className="text-2xl font-semibold text-stone-900 mb-8 text-center">
+        <h3 className="text-2xl font-semibold text-stone-900 mb-8 text-center">
           Frequently Asked Questions
-        </h2>
+        </h3>
         <FAQAccordion items={faqs} />
         <script
           type="application/ld+json"

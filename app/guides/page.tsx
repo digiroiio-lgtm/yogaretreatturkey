@@ -44,11 +44,11 @@ export default function GuidesPage() {
               />
             </div>
             <div className="p-7 space-y-3">
-              <h2 className="text-xl font-semibold text-stone-900">
+              <h3 className="text-xl font-semibold text-stone-900">
                 <Link href={`/guides/${guide.slug}`} className="hover:text-stone-700 transition">
                   {guide.title}
                 </Link>
-              </h2>
+              </h3>
               <p className="text-stone-600 text-sm leading-relaxed">{guide.excerpt}</p>
               <div className="flex items-center justify-between pt-2">
                 <span className="flex items-center gap-1.5 text-xs text-stone-500">
@@ -67,7 +67,7 @@ export default function GuidesPage() {
       </div>
 
       <div className="mt-16 rounded-3xl border border-stone-200 bg-stone-900 p-8 text-white text-center">
-        <h2 className="text-2xl font-semibold">Ready to book your first retreat?</h2>
+        <h3 className="text-2xl font-semibold">Ready to book your first retreat?</h3>
         <p className="mt-2 text-stone-300">Browse curated retreats matched to your goals and budget.</p>
         <div className="mt-5 flex flex-wrap justify-center gap-3">
           <AffiliateButton label="Browse Retreats" variant="outline" size="lg" />

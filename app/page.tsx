@@ -152,6 +152,7 @@ export default function Home() {
             eyebrow="Find your retreat style"
             title="Curated paths for different intentions"
             description="Browse by emotional goal, travel rhythm, and wellness depth."
+            as="h3"
           />
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {retreatStyles.map((style) => (
@@ -174,6 +175,7 @@ export default function Home() {
           eyebrow="Featured retreats"
           title="High-demand experiences chosen by our editors"
           description="Premium stays with exceptional hosts, service standards, and guest outcomes."
+          as="h3"
         />
         <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {featured.map((retreat) => (
@@ -188,7 +190,7 @@ export default function Home() {
       {/* CATEGORIES */}
       <section className="border-y border-stone-200 bg-stone-50">
         <div className="mx-auto w-full max-w-7xl px-4 py-12 md:px-6">
-          <h2 className="text-2xl font-semibold text-stone-900 mb-6">Popular Retreat Categories</h2>
+          <h3 className="text-2xl font-semibold text-stone-900 mb-6">Popular Retreat Categories</h3>
           <div className="grid gap-4 sm:grid-cols-3">
             {CATEGORIES.map((cat) => (
               <Link
@@ -252,6 +254,7 @@ export default function Home() {
           eyebrow="Guest stories"
           title="Why discerning travellers keep coming back"
           align="center"
+          as="h3"
         />
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           <ReviewCard quote="The curation quality is exceptional. It felt private, polished, and deeply restorative." author="A. Morgan" retreat="Aegean Clarity Retreat" />
@@ -268,6 +271,7 @@ export default function Home() {
               eyebrow="Retreat knowledge"
               title="Guides & insights for better decisions"
               description="Expert articles to help you plan, book, and arrive prepared."
+              as="h3"
             />
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               {posts.map((post) => (
@@ -301,7 +305,7 @@ export default function Home() {
 
       {/* FAQ */}
       <section className="mx-auto w-full max-w-4xl px-4 py-16 md:px-6">
-        <SectionHeader title="Questions, answered elegantly" align="center" />
+        <SectionHeader title="Questions, answered elegantly" align="center" as="h3" />
         <div className="mt-8">
           <FAQAccordion items={faqs} />
         </div>

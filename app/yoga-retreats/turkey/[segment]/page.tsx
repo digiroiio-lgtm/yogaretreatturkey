@@ -218,9 +218,9 @@ export default async function SegmentPage({ params }: Props) {
       )}
 
       <section className="mx-auto w-full max-w-4xl px-4 py-14 md:px-6">
-        <h2 className="text-2xl font-semibold text-stone-900 mb-8 text-center">
+        <h3 className="text-2xl font-semibold text-stone-900 mb-8 text-center">
           Frequently Asked Questions
-        </h2>
+        </h3>
         <FAQAccordion items={faqs} />
       </section>
 

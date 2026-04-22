@@ -160,9 +160,9 @@ export default async function CityTypePage({ params }: Props) {
 
       <section className="border-t border-stone-200 bg-stone-50">
         <div className="mx-auto w-full max-w-7xl px-4 py-10 md:px-6">
-          <h2 className="text-lg font-semibold text-stone-900 mb-4">
+          <h3 className="text-lg font-semibold text-stone-900 mb-4">
             {retreatType.name} in Other Turkish Cities
-          </h2>
+          </h3>
           <div className="flex flex-wrap gap-2">
             {relatedCityLinks.map((link) => (
               <Link
@@ -175,9 +175,9 @@ export default async function CityTypePage({ params }: Props) {
             ))}
           </div>
 
-          <h2 className="text-lg font-semibold text-stone-900 mt-8 mb-4">
+          <h3 className="text-lg font-semibold text-stone-900 mt-8 mb-4">
             Other Retreat Types in {city.name}
-          </h2>
+          </h3>
           <div className="flex flex-wrap gap-2">
             {relatedTypeLinks.map((link) => (
               <Link
@@ -193,9 +193,9 @@ export default async function CityTypePage({ params }: Props) {
       </section>
 
       <section className="mx-auto w-full max-w-4xl px-4 py-14 md:px-6">
-        <h2 className="text-2xl font-semibold text-stone-900 mb-8 text-center">
+        <h3 className="text-2xl font-semibold text-stone-900 mb-8 text-center">
           Frequently Asked Questions
-        </h2>
+        </h3>
         <FAQAccordion items={faqs} />
       </section>
 

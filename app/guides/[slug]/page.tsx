@@ -126,13 +126,13 @@ export default async function GuidePage({ params }: Props) {
 
       {guide.faqs.length > 0 && (
         <section className="mt-14">
-          <h2 className="text-2xl font-semibold text-stone-900 mb-6">Frequently Asked Questions</h2>
+          <h3 className="text-2xl font-semibold text-stone-900 mb-6">Frequently Asked Questions</h3>
           <FAQAccordion items={guide.faqs} />
         </section>
       )}
 
       <section className="mt-14">
-        <h2 className="text-2xl font-semibold text-stone-900 mb-6">Recommended Retreats</h2>
+        <h3 className="text-2xl font-semibold text-stone-900 mb-6">Recommended Retreats</h3>
         <div className="grid gap-6 md:grid-cols-3">
           {featured.map((retreat) => (
             <RetreatCard key={retreat.id} retreat={retreat} />

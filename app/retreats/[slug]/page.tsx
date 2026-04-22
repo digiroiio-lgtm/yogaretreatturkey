@@ -103,7 +103,7 @@ export default async function RetreatDetailPage({ params }: { params: Promise<{ 
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold text-stone-900">Daily schedule</h2>
+            <h3 className="text-2xl font-semibold text-stone-900">Daily schedule</h3>
             <div className="mt-4 overflow-hidden rounded-2xl border border-stone-200 bg-white">
               {retreat.schedule.map((item) => (
                 <div key={`${item.time}-${item.activity}`} className="grid grid-cols-[90px_1fr] border-b border-stone-100 px-4 py-3 text-sm last:border-0">
@@ -116,7 +116,7 @@ export default async function RetreatDetailPage({ params }: { params: Promise<{ 
 
           <div className="grid gap-6 md:grid-cols-2">
             <div>
-              <h2 className="text-2xl font-semibold text-stone-900">What&apos;s included</h2>
+              <h3 className="text-2xl font-semibold text-stone-900">What&apos;s included</h3>
               <ul className="mt-3 space-y-2 text-sm text-stone-700">
                 {retreat.inclusions.map((item) => (
                   <li key={item}>• {item}</li>
@@ -124,7 +124,7 @@ export default async function RetreatDetailPage({ params }: { params: Promise<{ 
               </ul>
             </div>
             <div>
-              <h2 className="text-2xl font-semibold text-stone-900">Not included</h2>
+              <h3 className="text-2xl font-semibold text-stone-900">Not included</h3>
               <ul className="mt-3 space-y-2 text-sm text-stone-700">
                 {retreat.exclusions.map((item) => (
                   <li key={item}>• {item}</li>
@@ -168,7 +168,7 @@ export default async function RetreatDetailPage({ params }: { params: Promise<{ 
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold text-stone-900">Similar retreats</h2>
+            <h3 className="text-2xl font-semibold text-stone-900">Similar retreats</h3>
             <div className="mt-4 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {similar.map((item) => (
                 <RetreatCard key={item.id} retreat={item} />

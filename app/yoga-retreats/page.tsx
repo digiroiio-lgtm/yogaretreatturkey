@@ -90,7 +90,7 @@ export default function YogaRetreatsPage() {
 
       <section className="border-y border-stone-200 bg-stone-50">
         <div className="mx-auto w-full max-w-7xl px-4 py-12 md:px-6">
-          <h2 className="text-2xl font-semibold text-stone-900 mb-8">Browse by Category</h2>
+          <h3 className="text-2xl font-semibold text-stone-900 mb-8">Browse by Category</h3>
           <div className="grid gap-4 sm:grid-cols-3">
             {CATEGORIES.map((cat) => (
               <Link
@@ -107,7 +107,7 @@ export default function YogaRetreatsPage() {
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-4 py-16 md:px-6">
-        <h2 className="text-2xl font-semibold text-stone-900 mb-2">Editor&apos;s Top Picks</h2>
+        <h3 className="text-2xl font-semibold text-stone-900 mb-2">Editor&apos;s Top Picks</h3>
         <p className="text-stone-600 mb-8">Highest-rated retreats across Turkey, verified by our curation team.</p>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {featured.map((retreat) => (
@@ -120,7 +120,7 @@ export default function YogaRetreatsPage() {
       </section>
 
       <section className="mx-auto w-full max-w-4xl px-4 py-12 md:px-6">
-        <h2 className="text-2xl font-semibold text-stone-900 mb-8 text-center">Common Questions</h2>
+        <h3 className="text-2xl font-semibold text-stone-900 mb-8 text-center">Common Questions</h3>
         <FAQAccordion items={faqs} />
       </section>
     </div>

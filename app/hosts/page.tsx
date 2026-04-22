@@ -32,7 +32,7 @@ export default function HostsPage() {
             ))}
           </div>
           <div className="rounded-3xl border border-stone-200 bg-white p-6 text-sm text-stone-700">
-            <h2 className="text-xl font-semibold text-stone-900">Why partner with us</h2>
+          <h2 className="mb-3 text-xl font-semibold text-stone-900">Why partner with us</h2>
             <ul className="mt-3 space-y-2">
               <li>• Premium brand presentation that protects your pricing power</li>
               <li>• Better guest-fit through AI + concierge qualification</li>
@@ -42,7 +42,7 @@ export default function HostsPage() {
         </div>
 
         <div>
-          <h2 className="mb-3 text-xl font-semibold text-stone-900">List your retreat</h2>
+          <h3 className="mb-3 text-xl font-semibold text-stone-900">List your retreat</h3>
           <InquiryForm />
         </div>
       </div>
