@@ -34,12 +34,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (type === "city") {
     return {
       title: `Yoga Retreats in ${data.name}, Turkey | 2026 Curated Guide`,
-      description: `Discover the best yoga retreats in ${data.name}, Turkey. ${data.description} Verified reviews, free cancellation, AI-matched recommendations.`
+      description: `Discover the best yoga retreats in ${data.name}, Turkey. ${data.description} Verified reviews, free cancellation, AI-matched recommendations.`,
+      alternates: { canonical: `/yoga-retreats/turkey/${segment}` }
     };
   }
   return {
     title: `${data.name} in Turkey | Curated Yoga Retreats 2026`,
-    description: `Browse curated ${data.name.toLowerCase()} in Turkey. ${data.description} Verified reviews, transparent pricing, and expert curation.`
+    description: `Browse curated ${data.name.toLowerCase()} in Turkey. ${data.description} Verified reviews, transparent pricing, and expert curation.`,
+    alternates: { canonical: `/yoga-retreats/turkey/${segment}` }
   };
 }
 

@@ -19,7 +19,8 @@ export const metadata: Metadata = {
     description:
       "Luxury yoga retreats across Turkey's finest destinations. AI-matched, verified, and curated.",
     type: "website"
-  }
+  },
+  alternates: { canonical: "/yoga-retreats/turkey" }
 };
 
 const faqs = [

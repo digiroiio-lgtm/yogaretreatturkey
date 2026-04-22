@@ -22,7 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!guide) return { title: "Not Found" };
   return {
     title: guide.title,
-    description: guide.metaDescription
+    description: guide.metaDescription,
+    alternates: { canonical: `/guides/${slug}` }
   };
 }
 

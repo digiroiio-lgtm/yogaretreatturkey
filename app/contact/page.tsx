@@ -6,7 +6,8 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Speak with our concierge team for retreat recommendations, booking questions, and host partnerships."
+  description: "Speak with our concierge team for retreat recommendations, booking questions, and host partnerships.",
+  alternates: { canonical: "/contact" }
 };
 
 const items = [

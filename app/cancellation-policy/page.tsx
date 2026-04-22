@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Refund & Cancellation Policy",
-  description: "Refund and cancellation policy placeholder for Yoga Retreat Turkey bookings."
+  description: "Refund and cancellation policy placeholder for Yoga Retreat Turkey bookings.",
+  alternates: { canonical: "/cancellation-policy" }
 };
 
 export default function CancellationPolicyPage() {

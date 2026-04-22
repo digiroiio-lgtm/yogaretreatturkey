@@ -3,7 +3,8 @@ import { InquiryForm } from "@/components/forms/inquiry-form";
 
 export const metadata: Metadata = {
   title: "Host & Partner with Us",
-  description: "Join a premium marketplace trusted by global wellness travelers seeking curated retreat experiences in Turkey."
+  description: "Join a premium marketplace trusted by global wellness travelers seeking curated retreat experiences in Turkey.",
+  alternates: { canonical: "/hosts" }
 };
 
 const metrics = [

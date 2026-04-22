@@ -8,7 +8,8 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Yoga Retreat Guides | Complete Beginner & Planning Guides",
   description:
-    "Comprehensive guides for yoga retreat travellers — from first-timer preparation to what to expect on arrival. Expert advice backed by thousands of retreat experiences."
+    "Comprehensive guides for yoga retreat travellers — from first-timer preparation to what to expect on arrival. Expert advice backed by thousands of retreat experiences.",
+  alternates: { canonical: "/guides" }
 };
 
 export default function GuidesPage() {

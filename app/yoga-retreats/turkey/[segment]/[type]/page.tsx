@@ -25,7 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${retreatType.name} in ${city.name}, Turkey | 2026 Guide`,
-    description: `Find the best ${retreatType.name.toLowerCase()} in ${city.name}, Turkey. Verified retreats, transparent pricing, and AI-matched recommendations. Free cancellation options.`
+    description: `Find the best ${retreatType.name.toLowerCase()} in ${city.name}, Turkey. Verified retreats, transparent pricing, and AI-matched recommendations. Free cancellation options.`,
+    alternates: { canonical: `/yoga-retreats/turkey/${segment}/${type}` }
   };
 }
 

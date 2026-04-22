@@ -10,7 +10,8 @@ import { MapPin } from "lucide-react";
 export const metadata: Metadata = {
   title: "Yoga Retreats | Turkey, Bali, Portugal & Beyond",
   description:
-    "Browse curated yoga retreats worldwide. Filter by destination, style, budget, and date. Over 2,300 verified reviews. Free cancellation available."
+    "Browse curated yoga retreats worldwide. Filter by destination, style, budget, and date. Over 2,300 verified reviews. Free cancellation available.",
+  alternates: { canonical: "/yoga-retreats" }
 };
 
 const faqs = [

@@ -6,7 +6,8 @@ import { getAllPosts } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Yoga Retreat Blog | Guides, Tips & Turkey Travel Insights",
   description:
-    "Expert guides and insights on yoga retreats in Turkey — planning tips, safety guides, cost breakdowns, and destination reviews from experienced retreat travellers."
+    "Expert guides and insights on yoga retreats in Turkey — planning tips, safety guides, cost breakdowns, and destination reviews from experienced retreat travellers.",
+  alternates: { canonical: "/blog" }
 };
 
 export default function BlogPage() {

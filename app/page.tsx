@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { RetreatCard } from "@/components/retreats/retreat-card";
 import { ReviewCard } from "@/components/retreats/review-card";
@@ -10,6 +11,10 @@ import { getFeaturedPosts } from "@/lib/blog";
 import { ArrowRight, Sparkles, Star, MapPin, Shield } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" }
+};
 
 const faqs = [
   {

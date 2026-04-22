@@ -3,7 +3,8 @@ import { AIMatchInterface } from "@/components/forms/ai-match-interface";
 
 export const metadata: Metadata = {
   title: "AI Concierge Match",
-  description: "Share your preferences and receive personalized retreat matches powered by our AI concierge logic."
+  description: "Share your preferences and receive personalized retreat matches powered by our AI concierge logic.",
+  alternates: { canonical: "/match" }
 };
 
 export default function MatchPage() {

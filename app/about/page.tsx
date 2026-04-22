@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Learn why Yoga Retreat Turkey is building a curated, AI-enabled wellness marketplace starting with Turkey."
+  description: "Learn why Yoga Retreat Turkey is building a curated, AI-enabled wellness marketplace starting with Turkey.",
+  alternates: { canonical: "/about" }
 };
 
 export default function AboutPage() {
