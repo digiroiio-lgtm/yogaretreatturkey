@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { retreats } from "@/lib/data/retreats";
 import { siteConfig } from "@/lib/site";
 import { CITIES, CATEGORIES, RETREAT_TYPES } from "@/lib/constants";
+import { TOP10_PAGES } from "@/lib/data/top10-pages";
 import { blogPosts } from "@/lib/data/blog";
 import { guides } from "@/lib/data/guides";
 
@@ -28,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const comboPages = CITIES.flatMap((city) =>
     RETREAT_TYPES.map((type) => `/yoga-retreats/turkey/${city.slug}/${type.slug}`)
   );
+  const top10Pages = TOP10_PAGES.map((p) => `/top-10-yoga-retreats-${p.slug}`);
 
   return [
     ...staticPages.map((path) => ({
@@ -54,6 +56,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${siteConfig.url}${path}`,
       lastModified: new Date(),
       priority: 0.7
+    })),
+    ...top10Pages.map((path) => ({
+      url: `${siteConfig.url}${path}`,
+      lastModified: new Date(),
+      priority: 0.85
     })),
     ...blogPosts.map((post) => ({
       url: `${siteConfig.url}/blog/${post.slug}`,

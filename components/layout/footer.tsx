@@ -1,5 +1,24 @@
 import Link from "next/link";
 import { CITIES, CATEGORIES } from "@/lib/constants";
+import { getTop10Href } from "@/lib/data/top10-pages";
+
+const FOOTER_TOP10_LINKS = [
+  { href: "/top-10-yoga-retreats-turkey", label: "Top 10 Turkey" },
+  { href: getTop10Href("bodrum"), label: "Top 10 Bodrum" },
+  { href: getTop10Href("fethiye"), label: "Top 10 Fethiye" },
+  { href: getTop10Href("antalya"), label: "Top 10 Antalya" },
+  { href: getTop10Href("cappadocia"), label: "Top 10 Cappadocia" },
+  { href: getTop10Href("kas"), label: "Top 10 Kaş" },
+  { href: getTop10Href("datca"), label: "Top 10 Datça" },
+  { href: getTop10Href("gocek"), label: "Top 10 Göcek" },
+  { href: getTop10Href("oludeniz"), label: "Top 10 Ölüdeniz" },
+  { href: getTop10Href("luxury"), label: "Luxury Retreats" },
+  { href: getTop10Href("affordable"), label: "Affordable Retreats" },
+  { href: getTop10Href("womens"), label: "Women's Retreats" },
+  { href: getTop10Href("surf"), label: "Surf + Yoga Retreats" },
+  { href: getTop10Href("detox"), label: "Detox Retreats" },
+  { href: getTop10Href("digital-nomad"), label: "Digital Nomad Retreats" },
+];
 
 export function Footer() {
   return (
@@ -64,6 +83,20 @@ export function Footer() {
           <Link href="/contact" className="block hover:text-stone-900">Contact</Link>
         </div>
       </div>
+      {/* TOP 10 GUIDES STRIP */}
+      <div className="border-t border-stone-200 px-4 py-8 md:px-6">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500 mb-4">
+          Top 10 Yoga Retreat Guides
+        </p>
+        <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-stone-600">
+          {FOOTER_TOP10_LINKS.map((link) => (
+            <Link key={link.href + link.label} href={link.href} className="hover:text-stone-900 transition">
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+
       <div className="border-t border-stone-200 px-4 py-4 md:px-6">
         <p className="text-xs text-stone-400 text-center">
           © 2026 Yoga Retreat Turkey. Retreat links are affiliate partnerships with BookRetreats.

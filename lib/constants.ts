@@ -132,16 +132,14 @@ export const TRUST_SIGNALS = [
   { icon: "✔", label: "Free cancellation options", detail: "Most retreats offer flexible cancellation — clearly shown before you book." }
 ];
 
-// Internal SEO links shown in the homepage hub block
-// Note: Bodrum and Fethiye are both within Muğla province and share the /mugla region page.
-// Separate city-level pages may be added in future; links updated accordingly when available.
+// Internal SEO links shown in the homepage hub block and the Top 10 Turkey page
 export const INTERNAL_SEO_LINKS = [
-  { href: "/yoga-retreats/turkey/mugla", label: "Best Yoga Retreats in Bodrum" },
-  { href: "/yoga-retreats/turkey/mugla", label: "Best Yoga Retreats in Fethiye & Muğla" },
-  { href: "/yoga-retreats/turkey/antalya", label: "Yoga Retreats in Antalya" },
-  { href: "/yoga-retreats/turkey/cappadocia", label: "Yoga Retreats in Cappadocia" },
-  { href: "/yoga-retreats/turkey/luxury", label: "Luxury Yoga Retreats Turkey" },
-  { href: "/yoga-retreats/turkey/detox", label: "Detox Yoga Retreats Turkey" },
-  { href: "/yoga-retreats/turkey/womens", label: "Women's Yoga Retreats Turkey" },
-  { href: "/retreats", label: "All Inclusive Yoga Retreats Turkey" }
+  { href: "/top-10-yoga-retreats-bodrum", label: "Best Yoga Retreats in Bodrum" },
+  { href: "/top-10-yoga-retreats-fethiye", label: "Yoga Retreats in Fethiye" },
+  { href: "/top-10-yoga-retreats-antalya", label: "Yoga Retreats in Antalya" },
+  { href: "/top-10-yoga-retreats-cappadocia", label: "Yoga Retreats in Cappadocia" },
+  { href: "/top-10-yoga-retreats-luxury", label: "Luxury Yoga Retreats Turkey" },
+  { href: "/top-10-yoga-retreats-detox", label: "Detox Yoga Retreats Turkey" },
+  { href: "/top-10-yoga-retreats-womens", label: "Women's Yoga Retreats Turkey" },
+  { href: "/top-10-yoga-retreats-affordable", label: "Affordable Yoga Retreats Turkey" }
 ];
