@@ -6,7 +6,7 @@ import { AffiliateButton } from "@/components/ui/affiliate-button";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { getRetreatsByCity, getRetreatsByCategory, getFeaturedRetreats } from "@/lib/retreats";
-import { CITIES, CATEGORIES } from "@/lib/constants";
+import { CITIES, CATEGORIES, RETREAT_TYPES } from "@/lib/constants";
 
 type Props = { params: Promise<{ segment: string }> };
 
@@ -67,14 +67,18 @@ export default async function SegmentPage({ params }: Props) {
 
   const relatedLinks =
     type === "city"
-      ? CATEGORIES.map((c) => ({
-          label: `${c.name} in ${data.name}`,
-          href: `/yoga-retreats/turkey/${segment}/${c.slug}`
+      ? RETREAT_TYPES.map((t) => ({
+          label: `${t.name} in ${data.name}`,
+          href: `/yoga-retreats/turkey/${segment}/${t.slug}`
         }))
-      : CITIES.map((c) => ({
-          label: `${data.name} in ${c.name}`,
-          href: `/yoga-retreats/turkey/${c.slug}/${segment}`
-        }));
+      : (() => {
+          const categoryData = data as (typeof CATEGORIES)[number];
+          const matchingType = RETREAT_TYPES.find((t) => t.categoryTag === categoryData.tag);
+          return CITIES.map((c) => ({
+            label: `${data.name} in ${c.name}`,
+            href: `/yoga-retreats/turkey/${c.slug}/${matchingType?.slug ?? segment}`
+          }));
+        })();
 
   const faqs =
     type === "city"
