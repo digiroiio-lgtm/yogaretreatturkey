@@ -7,6 +7,7 @@ import { AffiliateButton } from "@/components/ui/affiliate-button";
 import { BlogCard } from "@/components/blog/blog-card";
 import { retreatStyles, trustPoints, CITIES, CATEGORIES, HOMEPAGE_COMPARISON_RETREATS, SELECTION_CRITERIA, PRICE_TIERS, TRUST_SIGNALS, INTERNAL_SEO_LINKS } from "@/lib/constants";
 import { getFeaturedRetreats } from "@/lib/retreats";
+import { retreats } from "@/lib/data/retreats";
 import { getFeaturedPosts } from "@/lib/blog";
 import { ArrowRight, CheckCircle2, Sparkles, Star, MapPin, Shield } from "lucide-react";
 import Image from "next/image";
@@ -45,6 +46,11 @@ const faqs = [
 
 const featured = getFeaturedRetreats().slice(0, 4);
 const posts = getFeaturedPosts().slice(0, 3);
+
+// Derived stats computed from actual retreat data
+const retreatCount = retreats.length;
+const avgRating = (retreats.reduce((sum, r) => sum + r.rating, 0) / retreats.length).toFixed(1);
+const totalReviews = retreats.reduce((sum, r) => sum + r.reviewCount, 0);
 
 export default function Home() {
   const orgSchema = {
@@ -274,15 +280,15 @@ export default function Home() {
           </div>
           <div className="mt-10 md:mt-0 grid gap-4">
             <div className="rounded-2xl border border-stone-200 bg-stone-50 p-6">
-              <p className="text-3xl font-semibold text-stone-900">12</p>
+              <p className="text-3xl font-semibold text-stone-900">{retreatCount}</p>
               <p className="text-sm text-stone-600 mt-1">Curated retreats — every listing hand-reviewed</p>
             </div>
             <div className="rounded-2xl border border-stone-200 bg-stone-50 p-6">
-              <p className="text-3xl font-semibold text-stone-900">4.7</p>
+              <p className="text-3xl font-semibold text-stone-900">{avgRating}</p>
               <p className="text-sm text-stone-600 mt-1">Average guest rating across all retreats</p>
             </div>
             <div className="rounded-2xl border border-stone-200 bg-stone-50 p-6">
-              <p className="text-3xl font-semibold text-stone-900">2,300+</p>
+              <p className="text-3xl font-semibold text-stone-900">{totalReviews.toLocaleString()}+</p>
               <p className="text-sm text-stone-600 mt-1">Verified guest reviews from real bookings</p>
             </div>
           </div>
@@ -418,7 +424,7 @@ export default function Home() {
                   <BlogCard post={post} />
                   <div className="mt-3 px-1">
                     <AffiliateButton
-                      label="See retreats matching this guide →"
+                      label="See retreats matching this topic →"
                       size="sm"
                       className="text-xs"
                     />

@@ -140,7 +140,7 @@ export const INTERNAL_SEO_LINKS = [
   { href: "/yoga-retreats/turkey/antalya", label: "Yoga Retreats in Antalya" },
   { href: "/yoga-retreats/turkey/cappadocia", label: "Yoga Retreats in Cappadocia" },
   { href: "/yoga-retreats/turkey/luxury", label: "Luxury Yoga Retreats Turkey" },
-  { href: "/yoga-retreats/turkey/detox", label: "Affordable Yoga Retreats Turkey" },
+  { href: "/yoga-retreats/turkey/detox", label: "Detox Yoga Retreats Turkey" },
   { href: "/yoga-retreats/turkey/womens", label: "Women's Yoga Retreats Turkey" },
   { href: "/retreats", label: "All Inclusive Yoga Retreats Turkey" }
 ];
