@@ -1,10 +1,10 @@
 export const siteConfig = {
   name: "Yoga Retreats Turkey",
   description:
-    "Curated luxury yoga retreats in Turkey with AI-powered matching for mindful travelers.",
-  url: "https://saffronretreats.com",
+    "Discover curated luxury yoga retreats in Turkey — Antalya, Muğla, Cappadocia and Istanbul. AI-powered matching for mindful travelers.",
+  url: "https://yogaretreatsturkey.com",
   contact: {
-    email: "hello@saffronretreats.com",
+    email: "hello@yogaretreatsturkey.com",
     whatsappNumber: "905551112233"
   }
 };

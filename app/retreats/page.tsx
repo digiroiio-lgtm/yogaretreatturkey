@@ -3,8 +3,9 @@ import { RetreatsListing } from "@/components/retreats/retreats-listing";
 import { retreats } from "@/lib/data/retreats";
 
 export const metadata: Metadata = {
-  title: "Retreat Listings",
-  description: "Explore curated luxury yoga retreats across Turkey with premium filters and fast enquiry paths."
+  title: "All Yoga Retreats in Turkey | Curated Listings 2026",
+  description:
+    "Browse all curated yoga retreats in Turkey. Filter by location, style, budget, and date. 4.7 avg rating · 2,300+ verified reviews. Free cancellation available."
 };
 
 export default function RetreatsPage() {

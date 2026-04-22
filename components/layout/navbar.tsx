@@ -17,26 +17,28 @@ export function Navbar() {
           Yoga Retreats Turkey
         </Link>
 
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-5 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={`text-sm transition hover:text-stone-900 ${
                 pathname === link.href || pathname.startsWith(`${link.href}/`)
-                  ? "text-stone-900"
+                  ? "text-stone-900 font-medium"
                   : "text-stone-600"
               }`}
             >
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/match"
+          <a
+            href="https://bookretreats.com/?a=fwfncwdpylkdjfqemjuf"
+            target="_blank"
+            rel="nofollow sponsored"
             className="rounded-full bg-stone-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-stone-700"
           >
-            Get Matched
-          </Link>
+            Book Retreat
+          </a>
         </nav>
 
         <button
@@ -61,13 +63,15 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/retreats"
+            <a
+              href="https://bookretreats.com/?a=fwfncwdpylkdjfqemjuf"
+              target="_blank"
+              rel="nofollow sponsored"
               className="mt-2 rounded-full bg-stone-900 px-4 py-2 text-center text-sm font-medium text-white"
               onClick={() => setOpen(false)}
             >
-              Explore Retreats
-            </Link>
+              Book a Retreat
+            </a>
           </div>
         </div>
       ) : null}

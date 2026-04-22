@@ -1,5 +1,32 @@
 export type SkillLevel = "Beginner" | "Intermediate" | "Advanced" | "All levels";
 
+export type BlogPost = {
+  slug: string;
+  title: string;
+  metaDescription: string;
+  excerpt: string;
+  content: { heading: string; body: string }[];
+  faqs: { question: string; answer: string }[];
+  author: { name: string; role: string; bio: string };
+  publishedAt: string;
+  readTime: number;
+  category: string;
+  tags: string[];
+  coverImage: string;
+  featured: boolean;
+};
+
+export type Guide = {
+  slug: string;
+  title: string;
+  metaDescription: string;
+  excerpt: string;
+  content: { heading: string; body: string }[];
+  faqs: { question: string; answer: string }[];
+  coverImage: string;
+  readTime: number;
+};
+
 export type Retreat = {
   id: string;
   slug: string;

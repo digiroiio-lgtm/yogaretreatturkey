@@ -3,6 +3,9 @@ import { InquiryForm } from "@/components/forms/inquiry-form";
 import { PricingWidget } from "@/components/retreats/pricing-widget";
 import { RetreatCard } from "@/components/retreats/retreat-card";
 import { ReviewCard } from "@/components/retreats/review-card";
+import { AffiliateButton } from "@/components/ui/affiliate-button";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { UrgencyBadge } from "@/components/ui/urgency-badge";
 import { Badge } from "@/components/ui/badge";
 import { getRetreatBySlug, getSimilarRetreats, getUpcomingMonth } from "@/lib/retreats";
 import { MapPin, Star } from "lucide-react";
@@ -40,7 +43,15 @@ export default async function RetreatDetailPage({ params }: { params: Promise<{ 
 
   return (
     <div className="mx-auto w-full max-w-7xl px-4 py-10 md:px-6">
-      <section className="grid gap-4 md:grid-cols-3">
+      <Breadcrumb
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Retreats", href: "/retreats" },
+          { label: retreat.title }
+        ]}
+      />
+
+      <section className="mt-6 grid gap-4 md:grid-cols-3">
         <div className="relative h-80 overflow-hidden rounded-3xl border border-stone-200 md:col-span-2 md:h-[420px]">
           <Image src={retreat.images[0]} alt={retreat.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 66vw" priority />
         </div>
@@ -71,6 +82,11 @@ export default async function RetreatDetailPage({ params }: { params: Promise<{ 
               {retreat.tags.map((tag) => (
                 <Badge key={tag}>{tag}</Badge>
               ))}
+            </div>
+            <div className="mt-5 flex flex-wrap items-center gap-3">
+              <UrgencyBadge type="viewing" />
+              <UrgencyBadge type="limited" />
+              <AffiliateButton label="Book Now on BookRetreats" />
             </div>
           </div>
 
@@ -189,7 +205,8 @@ export default async function RetreatDetailPage({ params }: { params: Promise<{ 
             },
             provider: {
               "@type": "Organization",
-              name: "Yoga Retreats Turkey"
+              name: "Yoga Retreats Turkey",
+              url: "https://yogaretreatsturkey.com"
             }
           })
         }}

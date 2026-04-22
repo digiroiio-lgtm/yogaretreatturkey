@@ -1,8 +1,10 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
+import { UrgencyBadge } from "@/components/ui/urgency-badge";
 import { formatPrice } from "@/lib/retreats";
 import { Retreat } from "@/lib/types";
+import { AFFILIATE_URL } from "@/lib/affiliate";
 import { MapPin, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -23,6 +25,11 @@ export function RetreatCard({ retreat }: { retreat: Retreat }) {
           className="object-cover transition duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
+        {retreat.featured && (
+          <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-stone-700 backdrop-blur">
+            Editor&apos;s pick
+          </span>
+        )}
       </div>
       <div className="space-y-4 p-5">
         <div className="flex items-start justify-between gap-2">
@@ -55,8 +62,23 @@ export function RetreatCard({ retreat }: { retreat: Retreat }) {
             <Star size={14} className="fill-amber-400 text-amber-400" />
             {retreat.rating.toFixed(2)} ({retreat.reviewCount})
           </p>
-          <Link href={`/retreats/${retreat.slug}`} className="font-medium text-stone-900 hover:text-stone-700">
-            View retreat
+          <UrgencyBadge type={retreat.featured ? "viewing" : "limited"} />
+        </div>
+
+        <div className="flex gap-2 pt-1">
+          <a
+            href={AFFILIATE_URL}
+            target="_blank"
+            rel="nofollow sponsored"
+            className="flex-1 rounded-full bg-stone-900 py-2 text-center text-sm font-medium text-white transition hover:bg-stone-700"
+          >
+            Check Availability
+          </a>
+          <Link
+            href={`/retreats/${retreat.slug}`}
+            className="flex-1 rounded-full border border-stone-300 py-2 text-center text-sm font-medium text-stone-800 transition hover:bg-stone-100"
+          >
+            View Details
           </Link>
         </div>
       </div>

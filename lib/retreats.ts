@@ -1,4 +1,5 @@
 import { retreats } from "@/lib/data/retreats";
+import { CITY_LOCATION_MAP } from "@/lib/constants";
 import { Retreat } from "@/lib/types";
 
 export const getFeaturedRetreats = () => retreats.filter((retreat) => retreat.featured);
@@ -14,6 +15,14 @@ export const getSimilarRetreats = (current: Retreat) =>
         retreat.locationArea === current.locationArea
     )
     .slice(0, 3);
+
+export const getRetreatsByCity = (citySlug: string): Retreat[] => {
+  const locations = CITY_LOCATION_MAP[citySlug] ?? [];
+  return retreats.filter((r) => locations.includes(r.locationArea));
+};
+
+export const getRetreatsByCategory = (tag: string): Retreat[] =>
+  retreats.filter((r) => r.tags.includes(tag));
 
 export const getUpcomingMonth = (date: string) =>
   new Date(date).toLocaleString("en-US", { month: "long", year: "numeric" });
