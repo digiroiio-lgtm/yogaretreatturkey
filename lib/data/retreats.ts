@@ -112,6 +112,7 @@ export const retreats: Retreat[] = [
       "/images/retreat-10.svg",
       "/images/retreat-11.svg"
     ],
+    accommodationType: "Cliffside Eco-Lodge",
     tags: ["women’s retreat", "healing", "detox"],
     suitableFor: ["Women", "All levels"],
     featured: true,
@@ -154,6 +155,7 @@ export const retreats: Retreat[] = [
       "/images/retreat-2.svg",
       "/images/retreat-3.svg"
     ],
+    accommodationType: "Private Seaview Suites",
     tags: ["couples retreat", "luxury", "relationship wellness"],
     suitableFor: ["Couples", "All levels"],
     featured: false,
@@ -196,6 +198,7 @@ export const retreats: Retreat[] = [
       "/images/retreat-6.svg",
       "/images/retreat-7.svg"
     ],
+    accommodationType: "Healing Estate",
     tags: ["detox", "healing", "wellness reset"],
     suitableFor: ["Beginner", "Intermediate"],
     featured: false,
@@ -238,6 +241,7 @@ export const retreats: Retreat[] = [
       "/images/retreat-10.svg",
       "/images/retreat-11.svg"
     ],
+    accommodationType: "Private Cliff Villa",
     tags: ["luxury teacher-led retreat", "advanced", "education"],
     suitableFor: ["Intermediate", "Advanced"],
     featured: true,
@@ -280,6 +284,7 @@ export const retreats: Retreat[] = [
       "/images/retreat-2.svg",
       "/images/retreat-3.svg"
     ],
+    accommodationType: "Design Aparthotel",
     tags: ["digital nomad friendly", "community", "city + coast"],
     suitableFor: ["Beginner", "Intermediate", "Solo travelers"],
     featured: false,
@@ -322,6 +327,7 @@ export const retreats: Retreat[] = [
       "/images/retreat-6.svg",
       "/images/retreat-7.svg"
     ],
+    accommodationType: "Luxury Cave Hotel",
     tags: ["wellness reset", "mindfulness", "healing"],
     suitableFor: ["All levels", "Solo travelers"],
     featured: false,
@@ -364,6 +370,7 @@ export const retreats: Retreat[] = [
       "/images/retreat-10.svg",
       "/images/retreat-11.svg"
     ],
+    accommodationType: "Seaside Boutique House",
     tags: ["wellness reset", "beachfront", "detox"],
     suitableFor: ["Beginner", "Couples"],
     featured: false,
@@ -406,6 +413,7 @@ export const retreats: Retreat[] = [
       "/images/retreat-2.svg",
       "/images/retreat-3.svg"
     ],
+    accommodationType: "Luxury Yacht Cabin",
     tags: ["luxury", "couples retreat", "beachfront"],
     suitableFor: ["Couples", "Intermediate", "Advanced"],
     featured: true,
@@ -448,6 +456,7 @@ export const retreats: Retreat[] = [
       "/images/retreat-6.svg",
       "/images/retreat-7.svg"
     ],
+    accommodationType: "Lagoon Wellness Hotel",
     tags: ["healing", "detox", "wellness reset"],
     suitableFor: ["Beginner", "All levels"],
     featured: false,
@@ -490,6 +499,7 @@ export const retreats: Retreat[] = [
       "/images/retreat-10.svg",
       "/images/retreat-11.svg"
     ],
+    accommodationType: "Design Retreat House",
     tags: ["digital nomad friendly", "surf + yoga", "community"],
     suitableFor: ["Beginner", "Intermediate"],
     featured: false,
