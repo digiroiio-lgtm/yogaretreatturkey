@@ -90,7 +90,7 @@ export function Footer() {
         </p>
         <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-stone-600">
           {FOOTER_TOP10_LINKS.map((link) => (
-            <Link key={link.href + link.label} href={link.href} className="hover:text-stone-900 transition">
+            <Link key={link.href} href={link.href} className="hover:text-stone-900 transition">
               {link.label}
             </Link>
           ))}

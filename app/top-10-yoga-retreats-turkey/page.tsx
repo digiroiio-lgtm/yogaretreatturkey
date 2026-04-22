@@ -125,10 +125,7 @@ export default function Top10Page() {
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div>
                     <h2 className="text-xl font-semibold text-stone-900">
-                      <Link href={`/retreats/${retreat.slug}`} className="hover:text-stone-600 transition">
-                        {retreat.title}
-                      </Link>
-                      {" "}
+                      <Link href={`/retreats/${retreat.slug}`} className="hover:text-stone-600 transition">{retreat.title}</Link>{" "}
                       <span className="text-stone-400 font-normal">— {retreat.locationArea}</span>
                     </h2>
                     <div className="mt-1 flex flex-wrap items-center gap-3 text-sm text-stone-500">
