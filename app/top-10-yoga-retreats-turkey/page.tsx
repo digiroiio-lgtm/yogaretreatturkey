@@ -115,8 +115,8 @@ export default function Top10Page() {
               className="grid gap-6 rounded-3xl border border-stone-200 bg-white p-6 md:grid-cols-[80px_1fr] md:p-8 shadow-[0_8px_24px_-16px_rgba(0,0,0,0.2)]"
             >
               {/* Rank number */}
-              <div className="flex items-start">
-                <span className="text-5xl font-bold text-stone-200 leading-none select-none">
+              <div className="flex items-start" aria-hidden="true">
+                <span className="text-5xl font-bold text-stone-200 leading-none">
                   {String(index + 1).padStart(2, "0")}
                 </span>
               </div>

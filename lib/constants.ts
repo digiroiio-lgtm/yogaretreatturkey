@@ -83,14 +83,15 @@ export const CITY_LOCATION_MAP: Record<string, string[]> = {
   istanbul: ["Istanbul"]
 };
 
-// Comparison table: top retreat picks shown on the homepage
-export const HOMEPAGE_COMPARISON_RETREATS = [
-  { name: "Aegean Clarity Retreat", location: "Bodrum", price: "$2,100", duration: "7 days", rating: "4.9 ★", style: "Vinyasa + Restorative", slug: "aegean-clarity-bodrum" },
-  { name: "Fethiye Surf + Flow Week", location: "Fethiye", price: "$1,650", duration: "6 days", rating: "4.8 ★", style: "Power Flow", slug: "fethiye-surf-flow-week" },
-  { name: "Antalya Women's Sanctuary", location: "Antalya", price: "$1,890", duration: "5 days", rating: "4.95 ★", style: "Hatha + Yin", slug: "antalya-womens-sanctuary" },
-  { name: "Cappadocia Breath & Silence", location: "Cappadocia", price: "$1,750", duration: "5 days", rating: "4.88 ★", style: "Pranayama + Yin", slug: "kapadokya-breath-and-silence" },
-  { name: "Bodrum Luxe Yacht Retreat", location: "Bodrum Coast", price: "$3,200", duration: "5 days", rating: "4.99 ★", style: "Vinyasa", slug: "bodrum-luxe-yacht-retreat" }
-];
+// Slugs of retreats shown in the homepage comparison table.
+// Derived from the retreats data source in page.tsx to avoid data duplication.
+export const HOMEPAGE_COMPARISON_SLUGS = [
+  "aegean-clarity-bodrum",
+  "fethiye-surf-flow-week",
+  "antalya-womens-sanctuary",
+  "kapadokya-breath-and-silence",
+  "bodrum-luxe-yacht-retreat"
+] as const;
 
 // Selection criteria shown in the E-E-A-T "How We Select" block
 export const SELECTION_CRITERIA = [

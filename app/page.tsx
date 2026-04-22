@@ -5,8 +5,8 @@ import { ReviewCard } from "@/components/retreats/review-card";
 import { SectionHeader } from "@/components/ui/section-header";
 import { AffiliateButton } from "@/components/ui/affiliate-button";
 import { BlogCard } from "@/components/blog/blog-card";
-import { retreatStyles, trustPoints, CITIES, CATEGORIES, HOMEPAGE_COMPARISON_RETREATS, SELECTION_CRITERIA, PRICE_TIERS, TRUST_SIGNALS, INTERNAL_SEO_LINKS } from "@/lib/constants";
-import { getFeaturedRetreats } from "@/lib/retreats";
+import { retreatStyles, trustPoints, CITIES, CATEGORIES, HOMEPAGE_COMPARISON_SLUGS, SELECTION_CRITERIA, PRICE_TIERS, TRUST_SIGNALS, INTERNAL_SEO_LINKS } from "@/lib/constants";
+import { getFeaturedRetreats, formatPrice } from "@/lib/retreats";
 import { retreats } from "@/lib/data/retreats";
 import { getFeaturedPosts } from "@/lib/blog";
 import { ArrowRight, CheckCircle2, Sparkles, Star, MapPin, Shield } from "lucide-react";
@@ -47,10 +47,15 @@ const faqs = [
 const featured = getFeaturedRetreats().slice(0, 4);
 const posts = getFeaturedPosts().slice(0, 3);
 
-// Derived stats computed from actual retreat data
+// Derived stats computed from actual retreat data (module-level = computed once at build time)
 const retreatCount = retreats.length;
 const avgRating = (retreats.reduce((sum, r) => sum + r.rating, 0) / retreats.length).toFixed(1);
 const totalReviews = retreats.reduce((sum, r) => sum + r.reviewCount, 0);
+
+// Comparison table retreats derived from the retreats data source using the slug list in constants
+const comparisonRetreats = HOMEPAGE_COMPARISON_SLUGS
+  .map((slug) => retreats.find((r) => r.slug === slug))
+  .filter((r): r is NonNullable<typeof r> => r !== undefined);
 
 export default function Home() {
   const orgSchema = {
@@ -234,16 +239,16 @@ export default function Home() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-stone-100">
-                {HOMEPAGE_COMPARISON_RETREATS.map((row) => (
+                {comparisonRetreats.map((row) => (
                   <tr key={row.slug} className="hover:bg-stone-50 transition">
                     <td className="px-5 py-4 font-medium text-stone-900">
-                      <Link href={`/retreats/${row.slug}`} className="hover:text-stone-600 transition">{row.name}</Link>
+                      <Link href={`/retreats/${row.slug}`} className="hover:text-stone-600 transition">{row.title}</Link>
                     </td>
-                    <td className="px-5 py-4">{row.location}</td>
-                    <td className="px-5 py-4 font-medium">{row.price}</td>
-                    <td className="px-5 py-4">{row.duration}</td>
-                    <td className="px-5 py-4 text-amber-600 font-medium">{row.rating}</td>
-                    <td className="px-5 py-4 text-stone-500">{row.style}</td>
+                    <td className="px-5 py-4">{row.locationArea}</td>
+                    <td className="px-5 py-4 font-medium">{formatPrice(row.price, row.currency)}</td>
+                    <td className="px-5 py-4">{row.duration} days</td>
+                    <td className="px-5 py-4 text-amber-600 font-medium">{row.rating.toFixed(2)} ★</td>
+                    <td className="px-5 py-4 text-stone-500">{row.yogaStyle}</td>
                   </tr>
                 ))}
               </tbody>
@@ -424,7 +429,7 @@ export default function Home() {
                   <BlogCard post={post} />
                   <div className="mt-3 px-1">
                     <AffiliateButton
-                      label="See retreats matching this topic →"
+                      label="Browse yoga retreats in Turkey →"
                       size="sm"
                       className="text-xs"
                     />
