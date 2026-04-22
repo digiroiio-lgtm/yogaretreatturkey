@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f9f6f1;
+  --foreground: #1f1b16;
+}
+
+* {
+  border-color: rgb(231 229 228);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", "Avenir Next", "Segoe UI", sans-serif;
+}
