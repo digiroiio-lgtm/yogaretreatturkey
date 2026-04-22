@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllGuides } from "@/lib/blog";
 import { AffiliateButton } from "@/components/ui/affiliate-button";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Clock, BookOpen } from "lucide-react";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Yoga Retreat Guides | Complete Beginner & Planning Guides",
@@ -35,9 +35,9 @@ export default function GuidesPage() {
             className="group overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
           >
             <div className="relative h-56 overflow-hidden">
-              <Image
+              <OptimizedImage
                 src={guide.coverImage}
-                alt={guide.title}
+                alt={`Yoga retreat in Turkey guide showing ${guide.title.toLowerCase()}`}
                 fill
                 className="object-cover transition duration-500 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"

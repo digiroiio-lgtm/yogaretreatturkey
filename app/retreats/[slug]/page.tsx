@@ -5,11 +5,11 @@ import { RetreatCard } from "@/components/retreats/retreat-card";
 import { ReviewCard } from "@/components/retreats/review-card";
 import { AffiliateButton } from "@/components/ui/affiliate-button";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { UrgencyBadge } from "@/components/ui/urgency-badge";
 import { Badge } from "@/components/ui/badge";
 import { getRetreatBySlug, getSimilarRetreats, getUpcomingMonth } from "@/lib/retreats";
 import { MapPin, Star } from "lucide-react";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -54,12 +54,25 @@ export default async function RetreatDetailPage({ params }: { params: Promise<{ 
 
       <section className="mt-6 grid gap-4 md:grid-cols-3">
         <div className="relative h-80 overflow-hidden rounded-3xl border border-stone-200 md:col-span-2 md:h-[420px]">
-          <Image src={retreat.images[0]} alt={retreat.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 66vw" priority />
+          <OptimizedImage
+            src={retreat.images[0]}
+            alt={`${retreat.title} yoga retreat in ${retreat.locationArea} Turkey`}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 66vw"
+            priority
+          />
         </div>
         <div className="grid gap-4">
-          {retreat.images.slice(1, 3).map((image) => (
+          {retreat.images.slice(1, 3).map((image, i) => (
             <div key={image} className="relative h-[200px] overflow-hidden rounded-3xl border border-stone-200">
-              <Image src={image} alt={retreat.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+              <OptimizedImage
+                src={image}
+                alt={`${retreat.title} yoga retreat accommodation and setting in ${retreat.locationArea} — view ${i + 2}`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
             </div>
           ))}
         </div>
@@ -137,7 +150,13 @@ export default async function RetreatDetailPage({ params }: { params: Promise<{ 
             <h2 className="text-2xl font-semibold text-stone-900">Instructor & host profile</h2>
             <div className="mt-4 flex items-center gap-4">
               <div className="relative h-16 w-16 overflow-hidden rounded-full border border-stone-200">
-                <Image src={retreat.hostProfile.avatar} alt={retreat.hostProfile.name} fill className="object-cover" sizes="64px" />
+                <OptimizedImage
+                  src={retreat.hostProfile.avatar}
+                  alt={`${retreat.hostProfile.name} yoga retreat host`}
+                  fill
+                  className="object-cover"
+                  sizes="64px"
+                />
               </div>
               <div>
                 <p className="font-medium text-stone-900">{retreat.hostProfile.name}</p>

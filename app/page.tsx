@@ -11,6 +11,7 @@ import { getFeaturedPosts } from "@/lib/blog";
 import { ArrowRight, Sparkles, Star, MapPin, Shield } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { IMAGES, BLUR_DATA_URL } from "@/lib/images";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" }
@@ -87,12 +88,15 @@ export default function Home() {
         </div>
         <div className="relative h-[440px] overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-[0_30px_60px_-40px_rgba(0,0,0,0.4)]">
           <Image
-            src="/images/retreat-1.svg"
-            alt="Luxury yoga retreat in Turkey"
+            src={IMAGES.hero}
+            alt="Luxury yoga retreat in Turkey with ocean view and private villa experience"
             fill
             className="object-cover"
             priority
+            quality={90}
             sizes="(max-width: 768px) 100vw, 50vw"
+            blurDataURL={BLUR_DATA_URL}
+            placeholder="blur"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
           <div className="absolute bottom-5 left-5 right-5 rounded-2xl bg-white/90 p-4 backdrop-blur">

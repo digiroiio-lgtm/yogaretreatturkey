@@ -5,10 +5,10 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { AffiliateButton } from "@/components/ui/affiliate-button";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { RetreatCard } from "@/components/retreats/retreat-card";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { getPostBySlug, getAllPosts } from "@/lib/blog";
 import { getFeaturedRetreats } from "@/lib/retreats";
 import { Clock, Calendar, User } from "lucide-react";
-import Image from "next/image";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -81,9 +81,9 @@ export default async function BlogPostPage({ params }: Props) {
       />
 
       <div className="relative mt-6 h-64 overflow-hidden rounded-3xl md:h-80">
-        <Image
+        <OptimizedImage
           src={post.coverImage}
-          alt={post.title}
+          alt={`Yoga retreat in Turkey guide showing ${post.category.toLowerCase()} — ${post.title}`}
           fill
           className="object-cover"
           priority

@@ -1,4 +1,5 @@
 import { Retreat } from "@/lib/types";
+import { IMAGES } from "@/lib/images";
 
 export const retreats: Retreat[] = [
   {
@@ -21,7 +22,7 @@ export const retreats: Retreat[] = [
     rating: 4.9,
     reviewCount: 128,
     images: [
-      "/images/retreat-1.svg",
+      IMAGES.aegeanClarityBodrum,
       "/images/retreat-2.svg",
       "/images/retreat-3.svg"
     ],
@@ -64,7 +65,7 @@ export const retreats: Retreat[] = [
     rating: 4.8,
     reviewCount: 94,
     images: [
-      "/images/retreat-5.svg",
+      IMAGES.fethiyeSurfYoga,
       "/images/retreat-6.svg",
       "/images/retreat-7.svg"
     ],
@@ -107,11 +108,10 @@ export const retreats: Retreat[] = [
     rating: 4.95,
     reviewCount: 76,
     images: [
-      "/images/retreat-9.svg",
+      IMAGES.antalyaWomensRetreat,
       "/images/retreat-10.svg",
       "/images/retreat-11.svg"
     ],
-    accommodationType: "Cliffside Eco-Lodge",
     tags: ["women’s retreat", "healing", "detox"],
     suitableFor: ["Women", "All levels"],
     featured: true,
@@ -150,11 +150,10 @@ export const retreats: Retreat[] = [
     rating: 4.9,
     reviewCount: 61,
     images: [
-      "/images/retreat-1.svg",
+      IMAGES.gocekCouplesRetreat,
       "/images/retreat-2.svg",
       "/images/retreat-3.svg"
     ],
-    accommodationType: "Private Seaview Suites",
     tags: ["couples retreat", "luxury", "relationship wellness"],
     suitableFor: ["Couples", "All levels"],
     featured: false,
@@ -193,11 +192,10 @@ export const retreats: Retreat[] = [
     rating: 4.85,
     reviewCount: 84,
     images: [
-      "/images/retreat-5.svg",
+      IMAGES.izmirDetoxRetreat,
       "/images/retreat-6.svg",
       "/images/retreat-7.svg"
     ],
-    accommodationType: "Healing Estate",
     tags: ["detox", "healing", "wellness reset"],
     suitableFor: ["Beginner", "Intermediate"],
     featured: false,
@@ -236,11 +234,10 @@ export const retreats: Retreat[] = [
     rating: 4.97,
     reviewCount: 55,
     images: [
-      "/images/retreat-9.svg",
+      IMAGES.kasLuxuryIntensive,
       "/images/retreat-10.svg",
       "/images/retreat-11.svg"
     ],
-    accommodationType: "Private Cliff Villa",
     tags: ["luxury teacher-led retreat", "advanced", "education"],
     suitableFor: ["Intermediate", "Advanced"],
     featured: true,
@@ -279,11 +276,10 @@ export const retreats: Retreat[] = [
     rating: 4.7,
     reviewCount: 111,
     images: [
-      "/images/retreat-1.svg",
+      IMAGES.antalyaNomadResidency,
       "/images/retreat-2.svg",
       "/images/retreat-3.svg"
     ],
-    accommodationType: "Design Aparthotel",
     tags: ["digital nomad friendly", "community", "city + coast"],
     suitableFor: ["Beginner", "Intermediate", "Solo travelers"],
     featured: false,
@@ -322,11 +318,10 @@ export const retreats: Retreat[] = [
     rating: 4.88,
     reviewCount: 67,
     images: [
-      "/images/retreat-5.svg",
+      IMAGES.cappadociaYogaRetreat,
       "/images/retreat-6.svg",
       "/images/retreat-7.svg"
     ],
-    accommodationType: "Luxury Cave Hotel",
     tags: ["wellness reset", "mindfulness", "healing"],
     suitableFor: ["All levels", "Solo travelers"],
     featured: false,
@@ -365,11 +360,10 @@ export const retreats: Retreat[] = [
     rating: 4.75,
     reviewCount: 49,
     images: [
-      "/images/retreat-9.svg",
+      IMAGES.datcaSeasideRetreat,
       "/images/retreat-10.svg",
       "/images/retreat-11.svg"
     ],
-    accommodationType: "Seaside Boutique House",
     tags: ["wellness reset", "beachfront", "detox"],
     suitableFor: ["Beginner", "Couples"],
     featured: false,
@@ -408,11 +402,10 @@ export const retreats: Retreat[] = [
     rating: 4.99,
     reviewCount: 38,
     images: [
-      "/images/retreat-1.svg",
+      IMAGES.hero,
       "/images/retreat-2.svg",
       "/images/retreat-3.svg"
     ],
-    accommodationType: "Luxury Yacht Cabin",
     tags: ["luxury", "couples retreat", "beachfront"],
     suitableFor: ["Couples", "Intermediate", "Advanced"],
     featured: true,
@@ -451,11 +444,10 @@ export const retreats: Retreat[] = [
     rating: 4.86,
     reviewCount: 73,
     images: [
-      "/images/retreat-5.svg",
+      IMAGES.aegeanClarityBodrum,
       "/images/retreat-6.svg",
       "/images/retreat-7.svg"
     ],
-    accommodationType: "Lagoon Wellness Hotel",
     tags: ["healing", "detox", "wellness reset"],
     suitableFor: ["Beginner", "All levels"],
     featured: false,
@@ -494,11 +486,10 @@ export const retreats: Retreat[] = [
     rating: 4.72,
     reviewCount: 58,
     images: [
-      "/images/retreat-9.svg",
+      IMAGES.generalYogaTurkey,
       "/images/retreat-10.svg",
       "/images/retreat-11.svg"
     ],
-    accommodationType: "Design Retreat House",
     tags: ["digital nomad friendly", "surf + yoga", "community"],
     suitableFor: ["Beginner", "Intermediate"],
     featured: false,

@@ -1,4 +1,5 @@
 import { BlogPost } from "@/lib/types";
+import { IMAGES } from "@/lib/images";
 
 export const blogPosts: BlogPost[] = [
   {
@@ -70,7 +71,7 @@ export const blogPosts: BlogPost[] = [
     readTime: 9,
     category: "Turkey Guides",
     tags: ["yoga retreats", "turkey", "wellness", "travel guide", "2026"],
-    coverImage: "/images/retreat-1.svg",
+    coverImage: IMAGES.aegeanClarityBodrum,
     featured: true
   },
   {
@@ -137,7 +138,7 @@ export const blogPosts: BlogPost[] = [
     readTime: 7,
     category: "Planning",
     tags: ["yoga retreat cost", "turkey retreat pricing", "budget yoga retreat", "travel budget"],
-    coverImage: "/images/retreat-5.svg",
+    coverImage: IMAGES.hero,
     featured: true
   },
   {
@@ -200,7 +201,7 @@ export const blogPosts: BlogPost[] = [
     readTime: 6,
     category: "Travel Safety",
     tags: ["turkey safety", "solo female travel", "yoga retreat safety", "travel tips"],
-    coverImage: "/images/retreat-9.svg",
+    coverImage: IMAGES.cappadociaYogaRetreat,
     featured: false
   },
   {
@@ -267,7 +268,7 @@ export const blogPosts: BlogPost[] = [
     readTime: 10,
     category: "Planning",
     tags: ["yoga retreat planning", "turkey travel guide", "retreat packing", "turkey visa"],
-    coverImage: "/images/retreat-3.svg",
+    coverImage: IMAGES.generalYogaTurkey,
     featured: false
   }
 ];

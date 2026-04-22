@@ -2,12 +2,12 @@
 
 import { Badge } from "@/components/ui/badge";
 import { UrgencyBadge } from "@/components/ui/urgency-badge";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { formatPrice } from "@/lib/retreats";
 import { Retreat } from "@/lib/types";
 import { AFFILIATE_URL } from "@/lib/affiliate";
 import { MapPin, Star } from "lucide-react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 
 export function RetreatCard({ retreat }: { retreat: Retreat }) {
@@ -18,9 +18,9 @@ export function RetreatCard({ retreat }: { retreat: Retreat }) {
       className="group overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-[0_12px_30px_-24px_rgba(0,0,0,0.35)]"
     >
       <div className="relative h-52 overflow-hidden">
-        <Image
+        <OptimizedImage
           src={retreat.images[0]}
-          alt={retreat.title}
+          alt={`${retreat.title} yoga retreat in ${retreat.locationArea} Turkey`}
           fill
           className="object-cover transition duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

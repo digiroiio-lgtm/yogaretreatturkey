@@ -1,18 +1,18 @@
 import { BlogPost } from "@/lib/types";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Clock, ArrowRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 export function BlogCard({ post }: { post: BlogPost }) {
   return (
     <article className="group overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-[0_8px_24px_-16px_rgba(0,0,0,0.25)] transition hover:-translate-y-1 hover:shadow-md">
       <div className="relative h-48 overflow-hidden">
-        <Image
+        <OptimizedImage
           src={post.coverImage}
-          alt={post.title}
+          alt={`Yoga retreat in Turkey guide showing ${post.category.toLowerCase()} — ${post.title}`}
           fill
           className="object-cover transition duration-500 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
         <span className="absolute bottom-3 left-3 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-stone-700 backdrop-blur">

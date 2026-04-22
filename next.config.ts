@@ -18,9 +18,6 @@ const ContentSecurityPolicy = [
   .concat(";");
 
 const nextConfig: NextConfig = {
-  images: {
-    unoptimized: true
-  },
   async headers() {
     return [
       {
