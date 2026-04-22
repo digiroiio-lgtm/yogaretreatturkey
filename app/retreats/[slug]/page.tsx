@@ -189,7 +189,7 @@ export default async function RetreatDetailPage({ params }: { params: Promise<{ 
             },
             provider: {
               "@type": "Organization",
-              name: "Saffron Retreats"
+              name: "Yoga Retreats Turkey"
             }
           })
         }}

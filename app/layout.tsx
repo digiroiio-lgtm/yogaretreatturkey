@@ -7,12 +7,12 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Saffron Retreats | Luxury Yoga Retreats in Turkey",
-    template: "%s | Saffron Retreats"
+    default: "Yoga Retreats Turkey | Luxury Yoga Retreats in Turkey",
+    template: "%s | Yoga Retreats Turkey"
   },
   description: siteConfig.description,
   openGraph: {
-    title: "Saffron Retreats",
+    title: "Yoga Retreats Turkey",
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Saffron Retreats",
+    title: "Yoga Retreats Turkey",
     description: siteConfig.description
   }
 };

@@ -1,4 +1,4 @@
-# Saffron Retreats
+# Yoga Retreats Turkey
 
 Premium, conversion-focused Next.js marketplace MVP for discovering and booking curated yoga retreats in Turkey.
 

@@ -14,7 +14,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-stone-200/70 bg-[#f9f6f1]/95 backdrop-blur">
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 md:px-6">
         <Link href="/" className="text-sm font-semibold tracking-[0.22em] uppercase text-stone-900">
-          Saffron Retreats
+          Yoga Retreats Turkey
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">

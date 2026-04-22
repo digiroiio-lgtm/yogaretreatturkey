@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="mt-24 border-t border-stone-200 bg-[#f5f1ea]">
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 py-12 md:grid-cols-4 md:px-6">
         <div className="space-y-3 md:col-span-2">
-          <p className="text-xs uppercase tracking-[0.2em] text-stone-500">Saffron Retreats</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-stone-500">Yoga Retreats Turkey</p>
           <p className="max-w-md text-sm leading-relaxed text-stone-700">
             Curated luxury yoga retreats in Turkey, paired with AI-powered matching and trusted hosts.
           </p>
