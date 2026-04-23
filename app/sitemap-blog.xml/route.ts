@@ -8,8 +8,11 @@ export function GET() {
       url: `${siteConfig.url}/blog/${post.slug}`,
       // Use real publication date — never use new Date() which fakes freshness on every build.
       lastModified: post.publishedAt,
-      changeFrequency: "monthly" as const,
-      priority: 0.7
+      // Blog posts are published once and rarely updated → low crawl frequency.
+      // Featured (high-intent) posts get monthly; others get yearly.
+      changeFrequency: post.featured ? ("monthly" as const) : ("yearly" as const),
+      // Featured posts are high-conversion traffic pages; others are supporting content.
+      priority: post.featured ? 0.75 : 0.65
     }))
   );
 
