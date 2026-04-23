@@ -5,6 +5,8 @@ export type Top10PageFilter = {
   locationAreas?: string[];
   /** Match retreats whose tags array includes any of these values */
   tags?: string[];
+  /** Match retreats whose suitableFor array includes any of these values */
+  suitableFor?: string[];
   /** Upper bound on price (inclusive) */
   maxPrice?: number;
 };
@@ -44,6 +46,10 @@ export function filterRetreatsForPage(
     result = result.filter((r) =>
       filter.tags!.some((tag) => r.tags.includes(tag))
     );
+  } else if (filter.suitableFor?.length) {
+    result = result.filter((r) =>
+      filter.suitableFor!.some((s) => r.suitableFor.includes(s))
+    );
   }
 
   if (filter.maxPrice !== undefined) {
@@ -54,7 +60,8 @@ export function filterRetreatsForPage(
   const sortByPrice =
     filter.maxPrice !== undefined &&
     !filter.locationAreas?.length &&
-    !filter.tags?.length;
+    !filter.tags?.length &&
+    !filter.suitableFor?.length;
 
   result.sort((a, b) => (sortByPrice ? a.price - b.price : b.rating - a.rating));
 
@@ -321,6 +328,61 @@ export const TOP10_PAGES: Top10PageConfig[] = [
       { slug: "antalya", label: "Yoga Retreats in Antalya" },
       { slug: "fethiye", label: "Yoga Retreats in Fethiye" },
       { slug: "affordable", label: "Affordable Yoga Retreats Turkey" },
+      { slug: "turkey", label: "All Turkey Retreats" }
+    ]
+  },
+  // ── NICHE AUDIENCE PAGES ──────────────────────────────────────────────
+  {
+    slug: "beginners",
+    title: "Top Yoga Retreats for Beginners in Turkey (2026)",
+    metaTitle: "Top Yoga Retreats for Beginners in Turkey (2026) — Compare & Book",
+    metaDescription:
+      "First yoga retreat? Discover the best beginner-friendly yoga retreats in Turkey. Supportive teachers, all-levels classes, and beautiful coastal settings. Compare & book.",
+    subheadline:
+      "Welcoming, all-levels retreats in Turkey — chosen specifically for first-timers and beginner practitioners.",
+    locationDescription:
+      "Turkey is one of the best countries in the world for a first yoga retreat. The combination of experienced teachers who genuinely enjoy working with beginners, beautiful and calming coastal environments, and warm Turkish hospitality creates an ideal setting for your introduction to retreat life. Every retreat in this selection explicitly welcomes beginners and structures daily programs to meet all levels.",
+    filter: { suitableFor: ["Beginner", "All levels"] },
+    related: [
+      { slug: "affordable", label: "Affordable Yoga Retreats Turkey" },
+      { slug: "womens", label: "Women's Yoga Retreats Turkey" },
+      { slug: "fethiye", label: "Yoga Retreats in Fethiye" },
+      { slug: "turkey", label: "All Turkey Retreats" }
+    ]
+  },
+  {
+    slug: "couples",
+    title: "Top Yoga Retreats for Couples in Turkey (2026)",
+    metaTitle: "Top Yoga Retreats for Couples in Turkey (2026) — Compare & Book",
+    metaDescription:
+      "Discover the best couples yoga retreats in Turkey. Private villas, partner practices, shared wellness, and romantic Aegean settings. Compare & book.",
+    subheadline:
+      "Shared practice, private spaces, and romantic coastlines — yoga retreats designed for couples in Turkey.",
+    locationDescription:
+      "Couples yoga retreats in Turkey offer something rare: genuine shared transformation in a setting of extraordinary beauty. From private cliff villas in Bodrum to intimate cave suites in Cappadocia, these retreats blend partner yoga practices, couples meditation, and relationship-supportive workshops with the restorative backdrop of Turkey's finest coastal and cultural landscapes.",
+    filter: { tags: ["couples retreat"] },
+    related: [
+      { slug: "luxury", label: "Luxury Yoga Retreats Turkey" },
+      { slug: "bodrum", label: "Yoga Retreats in Bodrum" },
+      { slug: "gocek", label: "Yoga Retreats in Göcek" },
+      { slug: "turkey", label: "All Turkey Retreats" }
+    ]
+  },
+  {
+    slug: "solo",
+    title: "Top Yoga Retreats for Solo Travellers in Turkey (2026)",
+    metaTitle: "Top Yoga Retreats for Solo Travellers in Turkey (2026) — Compare & Book",
+    metaDescription:
+      "Travelling alone? Find the best solo yoga retreats in Turkey. Safe, social, and supportive programs on the Turkish coast with single supplement options. Compare & book.",
+    subheadline:
+      "Safe, social, and deeply restorative — the best solo-traveller yoga retreats on Turkey's Aegean and Mediterranean coasts.",
+    locationDescription:
+      "Turkey's yoga retreat community is exceptionally welcoming to solo travellers. The combination of small group sizes, communal mealtimes, and shared practice creates an environment where meaningful connections happen naturally — most solo guests leave with lasting friendships. These retreats are selected for their social community culture, single room options, and track record of solo traveller satisfaction.",
+    filter: { suitableFor: ["Solo travelers"] },
+    related: [
+      { slug: "affordable", label: "Affordable Yoga Retreats Turkey" },
+      { slug: "digital-nomad", label: "Digital Nomad Retreats Turkey" },
+      { slug: "fethiye", label: "Yoga Retreats in Fethiye" },
       { slug: "turkey", label: "All Turkey Retreats" }
     ]
   }
