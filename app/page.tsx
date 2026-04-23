@@ -437,9 +437,12 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="mt-6">
+            <div className="mt-6 flex flex-wrap gap-6">
               <Link href="/blog" className="text-sm font-medium text-stone-700 hover:text-stone-900 transition">
                 Read all articles →
+              </Link>
+              <Link href="/guides" className="text-sm font-medium text-stone-700 hover:text-stone-900 transition">
+                Browse all guides →
               </Link>
             </div>
           </div>

@@ -132,7 +132,9 @@ export const TRUST_SIGNALS = [
   { icon: "✔", label: "Free cancellation options", detail: "Most retreats offer flexible cancellation — clearly shown before you book." }
 ];
 
-// Internal SEO links shown in the homepage hub block and the Top 10 Turkey page
+// Internal SEO links shown in the homepage hub block and the Top 10 Turkey page.
+// Top-10 location/category pages appear first (commercial intent), followed by high-authority
+// guide pages which build topical trust and flow PageRank to the money pages.
 export const INTERNAL_SEO_LINKS = [
   { href: "/top-10-yoga-retreats-bodrum", label: "Best Yoga Retreats in Bodrum" },
   { href: "/top-10-yoga-retreats-fethiye", label: "Yoga Retreats in Fethiye" },
@@ -141,5 +143,9 @@ export const INTERNAL_SEO_LINKS = [
   { href: "/top-10-yoga-retreats-luxury", label: "Luxury Yoga Retreats Turkey" },
   { href: "/top-10-yoga-retreats-detox", label: "Detox Yoga Retreats Turkey" },
   { href: "/top-10-yoga-retreats-womens", label: "Women's Yoga Retreats Turkey" },
-  { href: "/top-10-yoga-retreats-affordable", label: "Affordable Yoga Retreats Turkey" }
+  { href: "/top-10-yoga-retreats-affordable", label: "Affordable Yoga Retreats Turkey" },
+  // Authority guides — homepage link equity signals high crawl priority to search engines
+  { href: "/guides/yoga-retreat-beginners", label: "Beginner's Guide to Yoga Retreats" },
+  { href: "/guides/how-to-choose-yoga-retreat", label: "How to Choose a Yoga Retreat" },
+  { href: "/guides/yoga-retreat-pricing-guide", label: "Yoga Retreat Pricing: What You Pay For" }
 ];
