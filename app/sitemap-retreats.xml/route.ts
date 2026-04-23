@@ -2,7 +2,8 @@ import { buildSitemapXml, xmlResponse } from "@/lib/sitemap-helpers";
 import { siteConfig } from "@/lib/site";
 import { retreats } from "@/lib/data/retreats";
 
-// Retreat pages are considered relatively stable after initial creation.
+// All retreat pages share the site-launch date as their lastModified.
+// Update this constant whenever retreat data is bulk-updated to signal fresh content to crawlers.
 const RETREAT_DATE = "2026-01-15";
 
 export function GET() {

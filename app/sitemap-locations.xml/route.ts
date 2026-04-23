@@ -35,9 +35,7 @@ export function GET() {
     });
   }
 
-  // Top-10 programmatic pages
-  // Combo pages (/yoga-retreats/turkey/[segment]/[type]) are intentionally excluded — they carry
-  // noindex and are retained only for internal navigation and link equity flow.
+  // Top-10 programmatic pages (combo pages excluded — they carry noindex and are for navigation only)
   for (const page of TOP10_PAGES) {
     const isTier1 = TIER1_SLUGS.has(page.slug);
     const isMoneyCat = MONEY_CATEGORY_SLUGS.has(page.slug);
