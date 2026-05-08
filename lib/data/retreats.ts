@@ -21,9 +21,9 @@ export const retreats: Retreat[] = [
     rating: 4.9,
     reviewCount: 128,
     images: [
-      "/images/retreat-1.svg",
-      "/images/retreat-2.svg",
-      "/images/retreat-3.svg"
+      "/images/1000_1734087208.jpeg",
+      "/images/1000_1736428473.jpeg",
+      "/images/1000_1736428500.jpeg"
     ],
     accommodationType: "Boutique Villa",
     tags: ["wellness reset", "luxury", "beachfront"],
@@ -41,7 +41,7 @@ export const retreats: Retreat[] = [
       role: "Lead Teacher",
       bio: "Former movement therapist blending precise sequencing with trauma-aware relaxation.",
       avatar:
-        "/images/retreat-4.svg"
+        "/images/1000_1736428509.jpeg"
     },
     fitTags: ["Best for executives", "Best for burnout recovery", "Best for couples"],
     wellnessScores: { calm: 9, luxury: 9, transformation: 8, socialEnergy: 4, natureImmersion: 8, detoxDepth: 6, digitalDetox: 7, sleepRecovery: 9 },
@@ -75,9 +75,9 @@ export const retreats: Retreat[] = [
     rating: 4.8,
     reviewCount: 94,
     images: [
-      "/images/retreat-5.svg",
-      "/images/retreat-6.svg",
-      "/images/retreat-7.svg"
+      "/images/1000_1737372518.jpeg",
+      "/images/1000_1739098479.jpeg",
+      "/images/1000_1767723278.jpeg"
     ],
     accommodationType: "Beach Boutique Hotel",
     tags: ["surf + yoga", "digital nomad friendly", "community"],
@@ -95,7 +95,7 @@ export const retreats: Retreat[] = [
       role: "Surf + Yoga Coach",
       bio: "Former competitive surfer helping modern travelers move with ease and confidence.",
       avatar:
-        "/images/retreat-8.svg"
+        "/images/1000_1768363139.jpeg"
     },
     fitTags: ["Best for solo travelers", "Best for beginners", "Best for digital nomads"],
     wellnessScores: { calm: 6, luxury: 6, transformation: 7, socialEnergy: 9, natureImmersion: 9, detoxDepth: 3, digitalDetox: 4, sleepRecovery: 6 },
@@ -129,9 +129,9 @@ export const retreats: Retreat[] = [
     rating: 4.95,
     reviewCount: 76,
     images: [
-      "/images/retreat-9.svg",
-      "/images/retreat-10.svg",
-      "/images/retreat-11.svg"
+      "/images/1000_1774286068.jpeg",
+      "/images/1000_1774658331.jpeg",
+      "/images/original.jpeg"
     ],
     accommodationType: "Cliffside Eco-Lodge",
     tags: ["women’s retreat", "healing", "detox"],
@@ -149,7 +149,7 @@ export const retreats: Retreat[] = [
       role: "Women’s Wellness Guide",
       bio: "Dedicated to creating grounded, emotionally safe retreat environments for modern women.",
       avatar:
-        "/images/retreat-12.svg"
+        "/images/placeholder_2.jpeg"
     },
     fitTags: ["Best for solo women", "Best for emotional healing", "Best for burnout recovery"],
     wellnessScores: { calm: 9, luxury: 7, transformation: 10, socialEnergy: 6, natureImmersion: 7, detoxDepth: 7, digitalDetox: 8, sleepRecovery: 9 },
@@ -183,9 +183,9 @@ export const retreats: Retreat[] = [
     rating: 4.9,
     reviewCount: 61,
     images: [
-      "/images/retreat-1.svg",
-      "/images/retreat-2.svg",
-      "/images/retreat-3.svg"
+      "/images/1000_1734087208.jpeg",
+      "/images/1000_1736428473.jpeg",
+      "/images/1000_1736428500.jpeg"
     ],
     accommodationType: "Private Seaview Suites",
     tags: ["couples retreat", "luxury", "relationship wellness"],
@@ -203,7 +203,7 @@ export const retreats: Retreat[] = [
       role: "Relationship Wellbeing Hosts",
       bio: "A husband-wife facilitation duo focused on connection practices for busy couples.",
       avatar:
-        "/images/retreat-4.svg"
+        "/images/1000_1736428509.jpeg"
     },
     fitTags: ["Best for couples", "Best for emotional healing"],
     wellnessScores: { calm: 8, luxury: 9, transformation: 8, socialEnergy: 6, natureImmersion: 8, detoxDepth: 4, digitalDetox: 6, sleepRecovery: 8 },
@@ -237,9 +237,9 @@ export const retreats: Retreat[] = [
     rating: 4.85,
     reviewCount: 84,
     images: [
-      "/images/retreat-5.svg",
-      "/images/retreat-6.svg",
-      "/images/retreat-7.svg"
+      "/images/1000_1737372518.jpeg",
+      "/images/1000_1739098479.jpeg",
+      "/images/1000_1767723278.jpeg"
     ],
     accommodationType: "Healing Estate",
     tags: ["detox", "healing", "wellness reset"],
@@ -257,7 +257,7 @@ export const retreats: Retreat[] = [
       role: "Functional Wellness Director",
       bio: "Medical doctor and yoga therapist bridging science-led detox with sustainable routines.",
       avatar:
-        "/images/retreat-8.svg"
+        "/images/1000_1768363139.jpeg"
     },
     fitTags: ["Best for burnout recovery", "Best for emotional healing", "Best for digital detox"],
     wellnessScores: { calm: 8, luxury: 6, transformation: 9, socialEnergy: 3, natureImmersion: 7, detoxDepth: 10, digitalDetox: 9, sleepRecovery: 8 },
@@ -291,9 +291,9 @@ export const retreats: Retreat[] = [
     rating: 4.97,
     reviewCount: 55,
     images: [
-      "/images/retreat-9.svg",
-      "/images/retreat-10.svg",
-      "/images/retreat-11.svg"
+      "/images/1000_1774286068.jpeg",
+      "/images/1000_1774658331.jpeg",
+      "/images/original.jpeg"
     ],
     accommodationType: "Private Cliff Villa",
     tags: ["luxury teacher-led retreat", "advanced", "education"],
@@ -311,7 +311,7 @@ export const retreats: Retreat[] = [
       role: "Senior Teacher",
       bio: "Known for high-precision teaching and immersive teacher-development programs.",
       avatar:
-        "/images/retreat-12.svg"
+        "/images/placeholder_2.jpeg"
     },
     fitTags: ["Best for executives", "Best for beginners", "Best for luxury seekers"],
     wellnessScores: { calm: 7, luxury: 10, transformation: 9, socialEnergy: 5, natureImmersion: 8, detoxDepth: 4, digitalDetox: 5, sleepRecovery: 7 },
@@ -345,9 +345,9 @@ export const retreats: Retreat[] = [
     rating: 4.7,
     reviewCount: 111,
     images: [
-      "/images/retreat-1.svg",
-      "/images/retreat-2.svg",
-      "/images/retreat-3.svg"
+      "/images/1000_1734087208.jpeg",
+      "/images/1000_1736428473.jpeg",
+      "/images/1000_1736428500.jpeg"
     ],
     accommodationType: "Design Aparthotel",
     tags: ["digital nomad friendly", "community", "city + coast"],
@@ -365,7 +365,7 @@ export const retreats: Retreat[] = [
       role: "Residency Host",
       bio: "Helps remote workers build sustainable routines without sacrificing momentum.",
       avatar:
-        "/images/retreat-4.svg"
+        "/images/1000_1736428509.jpeg"
     },
     fitTags: ["Best for digital nomads", "Best for solo travelers", "Best for executives"],
     wellnessScores: { calm: 6, luxury: 7, transformation: 7, socialEnergy: 8, natureImmersion: 5, detoxDepth: 3, digitalDetox: 2, sleepRecovery: 6 },
@@ -399,9 +399,9 @@ export const retreats: Retreat[] = [
     rating: 4.88,
     reviewCount: 67,
     images: [
-      "/images/retreat-5.svg",
-      "/images/retreat-6.svg",
-      "/images/retreat-7.svg"
+      "/images/1000_1737372518.jpeg",
+      "/images/1000_1739098479.jpeg",
+      "/images/1000_1767723278.jpeg"
     ],
     accommodationType: "Luxury Cave Hotel",
     tags: ["wellness reset", "mindfulness", "healing"],
@@ -419,7 +419,7 @@ export const retreats: Retreat[] = [
       role: "Meditation Guide",
       bio: "Specializes in breath-led nervous system recovery and contemplative retreat design.",
       avatar:
-        "/images/retreat-8.svg"
+        "/images/1000_1768363139.jpeg"
     },
     fitTags: ["Best for burnout recovery", "Best for solo travelers", "Best for digital detox"],
     wellnessScores: { calm: 10, luxury: 7, transformation: 9, socialEnergy: 2, natureImmersion: 9, detoxDepth: 6, digitalDetox: 10, sleepRecovery: 10 },
@@ -453,9 +453,9 @@ export const retreats: Retreat[] = [
     rating: 4.75,
     reviewCount: 49,
     images: [
-      "/images/retreat-9.svg",
-      "/images/retreat-10.svg",
-      "/images/retreat-11.svg"
+      "/images/1000_1774286068.jpeg",
+      "/images/1000_1774658331.jpeg",
+      "/images/original.jpeg"
     ],
     accommodationType: "Seaside Boutique House",
     tags: ["wellness reset", "beachfront", "detox"],
@@ -473,7 +473,7 @@ export const retreats: Retreat[] = [
       role: "Retreat Curator",
       bio: "Curates nature-rich coastal experiences with refined hospitality.",
       avatar:
-        "/images/retreat-12.svg"
+        "/images/placeholder_2.jpeg"
     },
     fitTags: ["Best for couples", "Best for beginners", "Best for burnout recovery"],
     wellnessScores: { calm: 9, luxury: 7, transformation: 7, socialEnergy: 4, natureImmersion: 10, detoxDepth: 6, digitalDetox: 7, sleepRecovery: 8 },
@@ -507,9 +507,9 @@ export const retreats: Retreat[] = [
     rating: 4.99,
     reviewCount: 38,
     images: [
-      "/images/retreat-1.svg",
-      "/images/retreat-2.svg",
-      "/images/retreat-3.svg"
+      "/images/1000_1734087208.jpeg",
+      "/images/1000_1736428473.jpeg",
+      "/images/1000_1736428500.jpeg"
     ],
     accommodationType: "Luxury Yacht Cabin",
     tags: ["luxury", "couples retreat", "beachfront"],
@@ -527,7 +527,7 @@ export const retreats: Retreat[] = [
       role: "Luxury Host",
       bio: "Specializes in intimate, design-forward retreat experiences at sea.",
       avatar:
-        "/images/retreat-4.svg"
+        "/images/1000_1736428509.jpeg"
     },
     fitTags: ["Best for couples", "Best for executives", "Best for luxury seekers"],
     wellnessScores: { calm: 7, luxury: 10, transformation: 7, socialEnergy: 6, natureImmersion: 10, detoxDepth: 3, digitalDetox: 5, sleepRecovery: 7 },
@@ -561,9 +561,9 @@ export const retreats: Retreat[] = [
     rating: 4.86,
     reviewCount: 73,
     images: [
-      "/images/retreat-5.svg",
-      "/images/retreat-6.svg",
-      "/images/retreat-7.svg"
+      "/images/1000_1737372518.jpeg",
+      "/images/1000_1739098479.jpeg",
+      "/images/1000_1767723278.jpeg"
     ],
     accommodationType: "Lagoon Wellness Hotel",
     tags: ["healing", "detox", "wellness reset"],
@@ -581,7 +581,7 @@ export const retreats: Retreat[] = [
       role: "Somatic Guide",
       bio: "Creates gentle, trauma-aware healing environments with a nature-first approach.",
       avatar:
-        "/images/retreat-8.svg"
+        "/images/1000_1768363139.jpeg"
     },
     fitTags: ["Best for burnout recovery", "Best for solo travelers", "Best for emotional healing"],
     wellnessScores: { calm: 9, luxury: 6, transformation: 9, socialEnergy: 4, natureImmersion: 9, detoxDepth: 7, digitalDetox: 8, sleepRecovery: 9 },
@@ -615,9 +615,9 @@ export const retreats: Retreat[] = [
     rating: 4.72,
     reviewCount: 58,
     images: [
-      "/images/retreat-9.svg",
-      "/images/retreat-10.svg",
-      "/images/retreat-11.svg"
+      "/images/1000_1774286068.jpeg",
+      "/images/1000_1774658331.jpeg",
+      "/images/original.jpeg"
     ],
     accommodationType: "Design Retreat House",
     tags: ["digital nomad friendly", "surf + yoga", "community"],
@@ -635,7 +635,7 @@ export const retreats: Retreat[] = [
       role: "Community Host",
       bio: "Design-minded host building meaningful social wellness experiences.",
       avatar:
-        "/images/retreat-12.svg"
+        "/images/placeholder_2.jpeg"
     },
     fitTags: ["Best for solo travelers", "Best for digital nomads", "Best for beginners"],
     wellnessScores: { calm: 5, luxury: 7, transformation: 6, socialEnergy: 10, natureImmersion: 5, detoxDepth: 2, digitalDetox: 3, sleepRecovery: 5 },

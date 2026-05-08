@@ -56,7 +56,7 @@ export const guides: Guide[] = [
           "Morning sessions typically begin at 7:00–8:00 AM. Some Mysore-style retreats start earlier at 6:00–6:30 AM. Check the schedule before booking if early rising is a concern."
       }
     ],
-    coverImage: "/images/retreat-2.svg",
+    coverImage: "/images/1000_1736428473.jpeg",
     readTime: 8
   },
   {
@@ -114,7 +114,7 @@ export const guides: Guide[] = [
           "Yes — you are always free to leave. However, most guests who consider leaving early during their second day (the most challenging point) are grateful they stayed. Talk to your host if you're struggling."
       }
     ],
-    coverImage: "/images/retreat-7.svg",
+    coverImage: "/images/1000_1767723278.jpeg",
     readTime: 9
   }
 ];

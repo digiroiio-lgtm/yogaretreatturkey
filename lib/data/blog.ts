@@ -70,7 +70,7 @@ export const blogPosts: BlogPost[] = [
     readTime: 9,
     category: "Turkey Guides",
     tags: ["yoga retreats", "turkey", "wellness", "travel guide", "2026"],
-    coverImage: "/images/retreat-1.svg",
+    coverImage: "/images/1000_1734087208.jpeg",
     featured: true
   },
   {
@@ -137,7 +137,7 @@ export const blogPosts: BlogPost[] = [
     readTime: 7,
     category: "Planning",
     tags: ["yoga retreat cost", "turkey retreat pricing", "budget yoga retreat", "travel budget"],
-    coverImage: "/images/retreat-5.svg",
+    coverImage: "/images/1000_1737372518.jpeg",
     featured: true
   },
   {
@@ -200,7 +200,7 @@ export const blogPosts: BlogPost[] = [
     readTime: 6,
     category: "Travel Safety",
     tags: ["turkey safety", "solo female travel", "yoga retreat safety", "travel tips"],
-    coverImage: "/images/retreat-9.svg",
+    coverImage: "/images/1000_1774286068.jpeg",
     featured: false
   },
   {
@@ -267,7 +267,7 @@ export const blogPosts: BlogPost[] = [
     readTime: 10,
     category: "Planning",
     tags: ["yoga retreat planning", "turkey travel guide", "retreat packing", "turkey visa"],
-    coverImage: "/images/retreat-3.svg",
+    coverImage: "/images/1000_1736428500.jpeg",
     featured: false
   },
   {
@@ -318,7 +318,7 @@ export const blogPosts: BlogPost[] = [
     readTime: 9,
     category: "Wellbeing",
     tags: ["burnout recovery", "yoga retreat", "nervous system reset", "digital detox", "restorative yoga"],
-    coverImage: "/images/retreat-7.svg",
+    coverImage: "/images/1000_1767723278.jpeg",
     featured: true
   },
   {
@@ -369,7 +369,7 @@ export const blogPosts: BlogPost[] = [
     readTime: 8,
     category: "Solo Travel",
     tags: ["solo women travel", "women's yoga retreat", "Turkey solo travel", "Solo Female Safe"],
-    coverImage: "/images/retreat-2.svg",
+    coverImage: "/images/1000_1736428473.jpeg",
     featured: false
   },
   {
@@ -420,7 +420,7 @@ export const blogPosts: BlogPost[] = [
     readTime: 11,
     category: "Planning",
     tags: ["wellness retreat value", "yoga retreat effectiveness", "retreat ROI", "are retreats worth it"],
-    coverImage: "/images/retreat-5.svg",
+    coverImage: "/images/1000_1737372518.jpeg",
     featured: false
   },
   {
@@ -475,7 +475,7 @@ export const blogPosts: BlogPost[] = [
     readTime: 10,
     category: "Destination Guides",
     tags: ["Turkey vs Bali", "yoga retreat comparison", "best yoga destination", "Bali alternative"],
-    coverImage: "/images/retreat-1.svg",
+    coverImage: "/images/1000_1734087208.jpeg",
     featured: true
   }
 ];

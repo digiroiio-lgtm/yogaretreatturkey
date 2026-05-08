@@ -89,7 +89,7 @@ export default function Home() {
         </div>
         <div className="relative h-[440px] overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-[0_30px_60px_-40px_rgba(0,0,0,0.4)]">
           <Image
-            src="/images/retreat-1.svg"
+            src="/images/1000_1734087208.jpeg"
             alt="Luxury yoga retreat in Turkey"
             fill
             className="object-cover"
