@@ -91,7 +91,6 @@ export function CompareClient() {
                 digitalDetox: "Digital detox",
                 sleepRecovery: "Sleep recovery",
               };
-              const colors = ["bg-sky-500", "bg-amber-500", "bg-purple-500", "bg-rose-400", "bg-emerald-500", "bg-teal-500", "bg-indigo-500", "bg-violet-500"];
               const colorMap: Record<string, string> = {
                 calm: "bg-sky-500", luxury: "bg-amber-500", transformation: "bg-purple-500",
                 socialEnergy: "bg-rose-400", natureImmersion: "bg-emerald-500", detoxDepth: "bg-teal-500",
