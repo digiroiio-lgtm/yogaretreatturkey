@@ -11,6 +11,8 @@ import { getFeaturedPosts } from "@/lib/blog";
 import { ArrowRight, Sparkles, Star, MapPin, Shield } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { EmailCapture } from "@/components/ui/email-capture";
+import { RetreatPersonalities } from "@/components/ui/retreat-personalities";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" }
@@ -261,6 +263,18 @@ export default function Home() {
           <ReviewCard quote="AI matching was surprisingly accurate — first recommendation was exactly my style and budget." author="R. Khan" retreat="Nomad Balance Residency" />
           <ReviewCard quote="Everything from transfer to host communication felt seamless and high trust." author="L. Foster" retreat="Cappadocia Breath & Silence" />
         </div>
+      </section>
+
+      {/* EMAIL CAPTURE */}
+      <section className="border-t border-stone-200">
+        <div className="mx-auto w-full max-w-7xl px-4 py-16 md:px-6">
+          <EmailCapture />
+        </div>
+      </section>
+
+      {/* PERSONALITIES */}
+      <section className="mx-auto w-full max-w-7xl px-4 pb-6 md:px-6">
+        <RetreatPersonalities />
       </section>
 
       {/* BLOG */}

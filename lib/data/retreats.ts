@@ -42,7 +42,18 @@ export const retreats: Retreat[] = [
       bio: "Former movement therapist blending precise sequencing with trauma-aware relaxation.",
       avatar:
         "/images/retreat-4.svg"
-    }
+    },
+    fitTags: ["Best for executives", "Best for burnout recovery", "Best for couples"],
+    wellnessScores: { calm: 9, luxury: 9, transformation: 8, socialEnergy: 4, natureImmersion: 8, detoxDepth: 6, digitalDetox: 7, sleepRecovery: 9 },
+    transformation: { fromState: "Burnout + mental overload", toState: "Calm nervous system + restored clarity + genuine rest", emotionalOutcome: "Guests arrive exhausted from high-performance living and leave with a recalibrated sense of purpose — slower, lighter, and reconnected to the body." },
+    trustBadges: ["Verified Host", "Airport Pickup Confirmed", "Flexible Cancellation", "Solo Female Safe"],
+    notFor: ["Those seeking party or nightlife", "Guests wanting large group energy"],
+    groupSize: "6–10 guests",
+    bestSeason: "May–October",
+    wifiQuality: "Good",
+    digitalNomadSuitable: false,
+    personality: "The Executive Reset",
+    recentBookings: 14
   },
   {
     id: "r2",
@@ -85,7 +96,18 @@ export const retreats: Retreat[] = [
       bio: "Former competitive surfer helping modern travelers move with ease and confidence.",
       avatar:
         "/images/retreat-8.svg"
-    }
+    },
+    fitTags: ["Best for solo travelers", "Best for beginners", "Best for digital nomads"],
+    wellnessScores: { calm: 6, luxury: 6, transformation: 7, socialEnergy: 9, natureImmersion: 9, detoxDepth: 3, digitalDetox: 4, sleepRecovery: 6 },
+    transformation: { fromState: "Restlessness + city stress", toState: "Playful energy + physical confidence + new friendships", emotionalOutcome: "An adventure reset that teaches the body to move with joy again — perfect for those who forgot what it feels like to play." },
+    trustBadges: ["Verified Host", "Airport Pickup Confirmed", "Solo Female Safe"],
+    notFor: ["Those seeking silence and solitude", "Guests with mobility limitations"],
+    groupSize: "8–14 guests",
+    bestSeason: "May–September",
+    wifiQuality: "Good",
+    digitalNomadSuitable: true,
+    personality: "The Social Explorer",
+    recentBookings: 9
   },
   {
     id: "r3",
@@ -128,7 +150,18 @@ export const retreats: Retreat[] = [
       bio: "Dedicated to creating grounded, emotionally safe retreat environments for modern women.",
       avatar:
         "/images/retreat-12.svg"
-    }
+    },
+    fitTags: ["Best for solo women", "Best for emotional healing", "Best for burnout recovery"],
+    wellnessScores: { calm: 9, luxury: 7, transformation: 10, socialEnergy: 6, natureImmersion: 7, detoxDepth: 7, digitalDetox: 8, sleepRecovery: 9 },
+    transformation: { fromState: "Depletion + emotional disconnection", toState: "Restored vitality + hormonal balance + deep sisterhood", emotionalOutcome: "Women leave feeling seen, replenished, and grounded in their own rhythm — often describing it as the most restorative week of the year." },
+    trustBadges: ["Verified Host", "Solo Female Safe", "Medical Reviewed", "Flexible Cancellation"],
+    notFor: ["Men", "Those seeking high-intensity physical activity"],
+    groupSize: "6–10 women",
+    bestSeason: "April–October",
+    wifiQuality: "Limited",
+    digitalNomadSuitable: false,
+    personality: "The Quiet Healer",
+    recentBookings: 18
   },
   {
     id: "r4",
@@ -171,7 +204,18 @@ export const retreats: Retreat[] = [
       bio: "A husband-wife facilitation duo focused on connection practices for busy couples.",
       avatar:
         "/images/retreat-4.svg"
-    }
+    },
+    fitTags: ["Best for couples", "Best for emotional healing"],
+    wellnessScores: { calm: 8, luxury: 9, transformation: 8, socialEnergy: 6, natureImmersion: 8, detoxDepth: 4, digitalDetox: 6, sleepRecovery: 8 },
+    transformation: { fromState: "Disconnection + parallel living", toState: "Renewed intimacy + shared vision + deep trust", emotionalOutcome: "Couples rediscover why they chose each other — and leave with tools and memories that sustain connection long after returning home." },
+    trustBadges: ["Verified Host", "Airport Pickup Confirmed", "Flexible Cancellation"],
+    notFor: ["Solo travelers", "Those not in a committed relationship"],
+    groupSize: "4–8 couples",
+    bestSeason: "May–October",
+    wifiQuality: "Good",
+    digitalNomadSuitable: false,
+    personality: "The Executive Reset",
+    recentBookings: 7
   },
   {
     id: "r5",
@@ -214,7 +258,18 @@ export const retreats: Retreat[] = [
       bio: "Medical doctor and yoga therapist bridging science-led detox with sustainable routines.",
       avatar:
         "/images/retreat-8.svg"
-    }
+    },
+    fitTags: ["Best for burnout recovery", "Best for emotional healing", "Best for digital detox"],
+    wellnessScores: { calm: 8, luxury: 6, transformation: 9, socialEnergy: 3, natureImmersion: 7, detoxDepth: 10, digitalDetox: 9, sleepRecovery: 8 },
+    transformation: { fromState: "Toxic load + inflammatory patterns + fatigue", toState: "Clean system + metabolic reset + renewed baseline health", emotionalOutcome: "Guests describe measurable changes — better digestion, clearer thinking, and a renewed relationship with food and rest." },
+    trustBadges: ["Verified Host", "Medical Reviewed", "Flexible Cancellation"],
+    notFor: ["Those seeking social or festive atmosphere", "Guests with severe dietary restrictions that conflict with the detox protocol"],
+    groupSize: "4–8 guests",
+    bestSeason: "May–June, September–October",
+    wifiQuality: "Limited",
+    digitalNomadSuitable: false,
+    personality: "The Burned-Out Founder",
+    recentBookings: 11
   },
   {
     id: "r6",
@@ -257,7 +312,18 @@ export const retreats: Retreat[] = [
       bio: "Known for high-precision teaching and immersive teacher-development programs.",
       avatar:
         "/images/retreat-12.svg"
-    }
+    },
+    fitTags: ["Best for executives", "Best for beginners", "Best for luxury seekers"],
+    wellnessScores: { calm: 7, luxury: 10, transformation: 9, socialEnergy: 5, natureImmersion: 8, detoxDepth: 4, digitalDetox: 5, sleepRecovery: 7 },
+    transformation: { fromState: "Plateau in practice + intellectual hunger", toState: "Deepened technique + philosophical clarity + teaching confidence", emotionalOutcome: "For practitioners ready to go deeper — leaving with expanded vocabulary, refined form, and renewed devotion to practice." },
+    trustBadges: ["Verified Host", "Airport Pickup Confirmed"],
+    notFor: ["Complete beginners", "Those seeking relaxation only"],
+    groupSize: "6–8 guests",
+    bestSeason: "June–September",
+    wifiQuality: "Good",
+    digitalNomadSuitable: false,
+    personality: "The Creative Nomad",
+    recentBookings: 5
   },
   {
     id: "r7",
@@ -300,7 +366,18 @@ export const retreats: Retreat[] = [
       bio: "Helps remote workers build sustainable routines without sacrificing momentum.",
       avatar:
         "/images/retreat-4.svg"
-    }
+    },
+    fitTags: ["Best for digital nomads", "Best for solo travelers", "Best for executives"],
+    wellnessScores: { calm: 6, luxury: 7, transformation: 7, socialEnergy: 8, natureImmersion: 5, detoxDepth: 3, digitalDetox: 2, sleepRecovery: 6 },
+    transformation: { fromState: "Chaos + burnout-while-working pattern", toState: "Productive flow + healthy rhythm + community belonging", emotionalOutcome: "A new template for how work and wellness coexist — guests leave with routines that travel with them." },
+    trustBadges: ["Verified Host", "Airport Pickup Confirmed"],
+    notFor: ["Those seeking complete digital detox", "Guests wanting traditional silent retreat experience"],
+    groupSize: "10–16 guests",
+    bestSeason: "Year-round",
+    wifiQuality: "Excellent",
+    digitalNomadSuitable: true,
+    personality: "The Burned-Out Founder",
+    recentBookings: 21
   },
   {
     id: "r8",
@@ -343,7 +420,18 @@ export const retreats: Retreat[] = [
       bio: "Specializes in breath-led nervous system recovery and contemplative retreat design.",
       avatar:
         "/images/retreat-8.svg"
-    }
+    },
+    fitTags: ["Best for burnout recovery", "Best for solo travelers", "Best for digital detox"],
+    wellnessScores: { calm: 10, luxury: 7, transformation: 9, socialEnergy: 2, natureImmersion: 9, detoxDepth: 6, digitalDetox: 10, sleepRecovery: 10 },
+    transformation: { fromState: "Overstimulation + fragmented attention + sleep debt", toState: "Still mind + deep rest + present-moment awareness", emotionalOutcome: "Guests describe it as a nervous system factory reset — arriving wired and scattered, leaving restored and grounded in a way that feels profound." },
+    trustBadges: ["Verified Host", "Solo Female Safe", "Flexible Cancellation"],
+    notFor: ["Those seeking social connection or group energy", "Guests who struggle with extended silence"],
+    groupSize: "4–8 guests",
+    bestSeason: "April–June, September–November",
+    wifiQuality: "Offline (Digital Detox)",
+    digitalNomadSuitable: false,
+    personality: "The Quiet Healer",
+    recentBookings: 8
   },
   {
     id: "r9",
@@ -386,7 +474,18 @@ export const retreats: Retreat[] = [
       bio: "Curates nature-rich coastal experiences with refined hospitality.",
       avatar:
         "/images/retreat-12.svg"
-    }
+    },
+    fitTags: ["Best for couples", "Best for beginners", "Best for burnout recovery"],
+    wellnessScores: { calm: 9, luxury: 7, transformation: 7, socialEnergy: 4, natureImmersion: 10, detoxDepth: 6, digitalDetox: 7, sleepRecovery: 8 },
+    transformation: { fromState: "Urban numbness + disconnection from nature", toState: "Sensory restoration + physical ease + deep nourishment", emotionalOutcome: "The simplest and most lasting transformation: guests remember what a healthy body feels like when it\'s fed well, moved gently, and placed in nature." },
+    trustBadges: ["Verified Host", "Solo Female Safe", "Flexible Cancellation", "Airport Pickup Confirmed"],
+    notFor: ["Those wanting intensive yoga curriculum", "Guests seeking large resort amenities"],
+    groupSize: "6–10 guests",
+    bestSeason: "May–October",
+    wifiQuality: "Good",
+    digitalNomadSuitable: false,
+    personality: "The Emotional Recovery Escape",
+    recentBookings: 6
   },
   {
     id: "r10",
@@ -429,7 +528,18 @@ export const retreats: Retreat[] = [
       bio: "Specializes in intimate, design-forward retreat experiences at sea.",
       avatar:
         "/images/retreat-4.svg"
-    }
+    },
+    fitTags: ["Best for couples", "Best for executives", "Best for luxury seekers"],
+    wellnessScores: { calm: 7, luxury: 10, transformation: 7, socialEnergy: 6, natureImmersion: 10, detoxDepth: 3, digitalDetox: 5, sleepRecovery: 7 },
+    transformation: { fromState: "Overscheduled + craving beauty and freedom", toState: "Expansive joy + sensory richness + restored wonder", emotionalOutcome: "A luxury experience that doesn\'t just pamper — it reintroduces guests to the feeling of genuine leisure and nautical freedom." },
+    trustBadges: ["Verified Host", "Airport Pickup Confirmed"],
+    notFor: ["Those with seasickness sensitivity", "Budget travelers", "Solo traveler first-timers"],
+    groupSize: "8–12 guests",
+    bestSeason: "June–September",
+    wifiQuality: "Limited",
+    digitalNomadSuitable: false,
+    personality: "The Luxury Seeker",
+    recentBookings: 4
   },
   {
     id: "r11",
@@ -472,7 +582,18 @@ export const retreats: Retreat[] = [
       bio: "Creates gentle, trauma-aware healing environments with a nature-first approach.",
       avatar:
         "/images/retreat-8.svg"
-    }
+    },
+    fitTags: ["Best for burnout recovery", "Best for solo travelers", "Best for emotional healing"],
+    wellnessScores: { calm: 9, luxury: 6, transformation: 9, socialEnergy: 4, natureImmersion: 9, detoxDepth: 7, digitalDetox: 8, sleepRecovery: 9 },
+    transformation: { fromState: "Chronic tension + emotional suppression", toState: "Released body + open heart + gentle clarity", emotionalOutcome: "Somatic healing in a spectacular natural setting — guests often say this was the week they finally let go of something they\'d been carrying for years." },
+    trustBadges: ["Verified Host", "Solo Female Safe", "Medical Reviewed", "Flexible Cancellation"],
+    notFor: ["Those seeking high-energy social retreats", "Guests wanting advanced yoga curriculum"],
+    groupSize: "6–10 guests",
+    bestSeason: "May–October",
+    wifiQuality: "Good",
+    digitalNomadSuitable: false,
+    personality: "The Emotional Recovery Escape",
+    recentBookings: 13
   },
   {
     id: "r12",
@@ -515,6 +636,17 @@ export const retreats: Retreat[] = [
       bio: "Design-minded host building meaningful social wellness experiences.",
       avatar:
         "/images/retreat-12.svg"
-    }
+    },
+    fitTags: ["Best for solo travelers", "Best for digital nomads", "Best for beginners"],
+    wellnessScores: { calm: 5, luxury: 7, transformation: 6, socialEnergy: 10, natureImmersion: 5, detoxDepth: 2, digitalDetox: 3, sleepRecovery: 5 },
+    transformation: { fromState: "Isolation + creative stagnation", toState: "Social aliveness + creative spark + urban wellness rhythm", emotionalOutcome: "The antidote to isolation — guests leave with new connections, new ideas, and a refreshed sense of what community feels like." },
+    trustBadges: ["Verified Host", "Airport Pickup Confirmed"],
+    notFor: ["Those seeking silence or solitary practice", "Guests wanting remote nature settings"],
+    groupSize: "10–16 guests",
+    bestSeason: "April–October",
+    wifiQuality: "Excellent",
+    digitalNomadSuitable: true,
+    personality: "The Social Explorer",
+    recentBookings: 16
   }
 ];

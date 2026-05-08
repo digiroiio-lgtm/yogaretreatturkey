@@ -3,12 +3,16 @@ import { InquiryForm } from "@/components/forms/inquiry-form";
 import { PricingWidget } from "@/components/retreats/pricing-widget";
 import { RetreatCard } from "@/components/retreats/retreat-card";
 import { ReviewCard } from "@/components/retreats/review-card";
+import { TransformationBlock } from "@/components/retreats/transformation-block";
 import { AffiliateButton } from "@/components/ui/affiliate-button";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { FitTags } from "@/components/ui/fit-tags";
+import { TrustBadges } from "@/components/ui/trust-badges";
+import { WellnessScoreBar } from "@/components/ui/wellness-score-bar";
 import { UrgencyBadge } from "@/components/ui/urgency-badge";
 import { Badge } from "@/components/ui/badge";
 import { getRetreatBySlug, getSimilarRetreats, getUpcomingMonth } from "@/lib/retreats";
-import { MapPin, Star } from "lucide-react";
+import { Flame, MapPin, Star, Users, Calendar, Wifi } from "lucide-react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -69,6 +73,11 @@ export default async function RetreatDetailPage({ params }: { params: Promise<{ 
         <div className="space-y-10">
           <div>
             <h1 className="text-4xl font-semibold tracking-tight text-stone-900">{retreat.title}</h1>
+            {retreat.fitTags?.length > 0 && (
+              <div className="mt-3">
+                <FitTags tags={retreat.fitTags} />
+              </div>
+            )}
             <div className="mt-3 flex flex-wrap items-center gap-4 text-sm text-stone-600">
               <p className="inline-flex items-center gap-1">
                 <MapPin size={15} /> {retreat.locationArea}
@@ -79,6 +88,16 @@ export default async function RetreatDetailPage({ params }: { params: Promise<{ 
               </p>
             </div>
             <p className="mt-5 text-lg leading-relaxed text-stone-600">{retreat.fullDescription}</p>
+            {retreat.transformation && (
+              <div className="mt-6">
+                <h2 className="mb-4 text-2xl font-semibold text-stone-900">Your transformation</h2>
+                <TransformationBlock
+                  fromState={retreat.transformation.fromState}
+                  toState={retreat.transformation.toState}
+                  emotionalOutcome={retreat.transformation.emotionalOutcome}
+                />
+              </div>
+            )}
             <div className="mt-5 flex flex-wrap gap-2">
               {retreat.tags.map((tag) => (
                 <Badge key={tag}>{tag}</Badge>
@@ -100,6 +119,11 @@ export default async function RetreatDetailPage({ params }: { params: Promise<{ 
                 </li>
               ))}
             </ul>
+            {retreat.trustBadges?.length > 0 && (
+              <div className="mt-4">
+                <TrustBadges badges={retreat.trustBadges} />
+              </div>
+            )}
           </div>
 
           <div>
@@ -133,6 +157,20 @@ export default async function RetreatDetailPage({ params }: { params: Promise<{ 
             </div>
           </div>
 
+          {retreat.notFor?.length > 0 && (
+            <div className="rounded-3xl border border-stone-200 bg-stone-50 p-6">
+              <h3 className="text-xl font-semibold text-stone-900">This retreat is NOT for</h3>
+              <ul className="mt-3 space-y-2 text-sm text-stone-600">
+                {retreat.notFor.map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="mt-0.5 text-stone-400">✕</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           <div className="rounded-3xl border border-stone-200 bg-white p-6">
             <h2 className="text-2xl font-semibold text-stone-900">Instructor & host profile</h2>
             <div className="mt-4 flex items-center gap-4">
@@ -146,6 +184,23 @@ export default async function RetreatDetailPage({ params }: { params: Promise<{ 
             </div>
             <p className="mt-3 text-sm leading-relaxed text-stone-600">{retreat.hostProfile.bio}</p>
           </div>
+
+          {retreat.wellnessScores && (
+            <div className="rounded-3xl border border-stone-200 bg-white p-6">
+              <h2 className="text-2xl font-semibold text-stone-900">Wellness scores</h2>
+              <p className="mt-1 text-sm text-stone-500">How this retreat ranks across key wellness dimensions.</p>
+              <div className="mt-5 space-y-3">
+                <WellnessScoreBar label="Calm & stillness" score={retreat.wellnessScores.calm} color="bg-sky-500" />
+                <WellnessScoreBar label="Luxury" score={retreat.wellnessScores.luxury} color="bg-amber-500" />
+                <WellnessScoreBar label="Transformation" score={retreat.wellnessScores.transformation} color="bg-purple-500" />
+                <WellnessScoreBar label="Social energy" score={retreat.wellnessScores.socialEnergy} color="bg-rose-400" />
+                <WellnessScoreBar label="Nature immersion" score={retreat.wellnessScores.natureImmersion} color="bg-emerald-500" />
+                <WellnessScoreBar label="Detox depth" score={retreat.wellnessScores.detoxDepth} color="bg-teal-500" />
+                <WellnessScoreBar label="Digital detox" score={retreat.wellnessScores.digitalDetox} color="bg-indigo-500" />
+                <WellnessScoreBar label="Sleep recovery" score={retreat.wellnessScores.sleepRecovery} color="bg-violet-500" />
+              </div>
+            </div>
+          )}
 
           <div className="rounded-3xl border border-stone-200 bg-white p-6">
             <h2 className="text-2xl font-semibold text-stone-900">Accommodation</h2>
@@ -179,14 +234,42 @@ export default async function RetreatDetailPage({ params }: { params: Promise<{ 
 
         <div className="space-y-5">
           <PricingWidget price={retreat.price} currency={retreat.currency} duration={retreat.duration} />
-          <div className="rounded-3xl border border-stone-200 bg-white p-5">
+          {retreat.recentBookings > 0 && (
+            <div className="flex items-center gap-2 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+              <Flame size={14} className="text-amber-500" />
+              <span>{retreat.recentBookings} booked this month</span>
+            </div>
+          )}
+          <div className="rounded-3xl border border-stone-200 bg-white p-5 space-y-3">
             <p className="text-sm font-medium text-stone-900">Upcoming dates</p>
-            <ul className="mt-3 space-y-2 text-sm text-stone-600">
+            <ul className="space-y-2 text-sm text-stone-600">
               {retreat.dates.map((date) => (
                 <li key={date}>{getUpcomingMonth(date)}</li>
               ))}
             </ul>
           </div>
+          {(retreat.groupSize || retreat.bestSeason) && (
+            <div className="rounded-3xl border border-stone-200 bg-white p-5 space-y-3">
+              {retreat.groupSize && (
+                <p className="flex items-center gap-2 text-sm text-stone-700">
+                  <Users size={14} className="text-stone-400" />
+                  <span><strong>Group size:</strong> {retreat.groupSize}</span>
+                </p>
+              )}
+              {retreat.bestSeason && (
+                <p className="flex items-center gap-2 text-sm text-stone-700">
+                  <Calendar size={14} className="text-stone-400" />
+                  <span><strong>Best season:</strong> {retreat.bestSeason}</span>
+                </p>
+              )}
+              {retreat.wifiQuality && (
+                <p className="flex items-center gap-2 text-sm text-stone-700">
+                  <Wifi size={14} className="text-stone-400" />
+                  <span><strong>Wi-Fi:</strong> {retreat.wifiQuality}</span>
+                </p>
+              )}
+            </div>
+          )}
           <InquiryForm compact />
         </div>
       </section>

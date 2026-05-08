@@ -1,11 +1,13 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
+import { FitTags } from "@/components/ui/fit-tags";
+import { TrustBadges } from "@/components/ui/trust-badges";
 import { UrgencyBadge } from "@/components/ui/urgency-badge";
 import { formatPrice } from "@/lib/retreats";
 import { Retreat } from "@/lib/types";
 import { AFFILIATE_URL } from "@/lib/affiliate";
-import { MapPin, Star } from "lucide-react";
+import { Flame, MapPin, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -51,11 +53,19 @@ export function RetreatCard({ retreat }: { retreat: Retreat }) {
 
         <p className="text-sm leading-relaxed text-stone-600">{retreat.shortDescription}</p>
 
+        {retreat.fitTags?.length > 0 && (
+          <FitTags tags={retreat.fitTags} limit={2} />
+        )}
+
         <div className="flex flex-wrap gap-2">
           <Badge>{retreat.yogaStyle}</Badge>
           <Badge>{retreat.duration} days</Badge>
           <Badge>{retreat.accommodationType}</Badge>
         </div>
+
+        {retreat.trustBadges?.length > 0 && (
+          <TrustBadges badges={retreat.trustBadges} limit={2} />
+        )}
 
         <div className="flex items-center justify-between text-sm">
           <p className="flex items-center gap-1 text-stone-700">
@@ -64,6 +74,13 @@ export function RetreatCard({ retreat }: { retreat: Retreat }) {
           </p>
           <UrgencyBadge type={retreat.featured ? "viewing" : "limited"} />
         </div>
+
+        {retreat.recentBookings > 0 && (
+          <p className="flex items-center gap-1.5 text-xs text-amber-700">
+            <Flame size={12} className="text-amber-500" />
+            {retreat.recentBookings} booked this month
+          </p>
+        )}
 
         <div className="flex gap-2 pt-1">
           <a

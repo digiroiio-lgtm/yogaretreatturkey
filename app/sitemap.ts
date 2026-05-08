@@ -19,7 +19,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/privacy",
     "/terms",
-    "/cancellation-policy"
+    "/cancellation-policy",
+    "/medical-wellness",
+    "/why-turkey",
+    "/yoga-retreats-for-burnout",
+    "/solo-women-retreats-turkey",
+    "/luxury-yoga-retreats-turkey",
+    "/digital-detox-retreats-turkey",
+    "/compare"
   ];
 
   const cityPages = CITIES.map((c) => `/yoga-retreats/turkey/${c.slug}`);

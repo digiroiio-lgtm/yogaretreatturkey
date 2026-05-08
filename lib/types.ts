@@ -58,4 +58,28 @@ export type Retreat = {
     bio: string;
     avatar: string;
   };
+  fitTags: string[];
+  wellnessScores: {
+    calm: number;
+    luxury: number;
+    transformation: number;
+    socialEnergy: number;
+    natureImmersion: number;
+    detoxDepth: number;
+    digitalDetox: number;
+    sleepRecovery: number;
+  };
+  transformation: {
+    fromState: string;
+    toState: string;
+    emotionalOutcome: string;
+  };
+  trustBadges: string[];
+  notFor: string[];
+  groupSize: string;
+  bestSeason: string;
+  wifiQuality: "Excellent" | "Good" | "Limited" | "Offline (Digital Detox)";
+  digitalNomadSuitable: boolean;
+  personality: string;
+  recentBookings: number;
 };

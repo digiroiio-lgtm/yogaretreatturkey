@@ -269,5 +269,213 @@ export const blogPosts: BlogPost[] = [
     tags: ["yoga retreat planning", "turkey travel guide", "retreat packing", "turkey visa"],
     coverImage: "/images/retreat-3.svg",
     featured: false
+  },
+  {
+    slug: "yoga-retreat-burnout-recovery",
+    title: "How a Yoga Retreat Can Help You Recover from Burnout",
+    metaDescription:
+      "Burnout is more than tiredness. Learn how a structured yoga retreat in Turkey — with nervous system reset, digital detox, and somatic healing — can help you genuinely recover.",
+    excerpt:
+      "Burnout isn't solved by a holiday. But a well-structured yoga retreat — with intentional daily rhythm, professional guidance, and real disconnection — can begin the nervous system repair that burnout demands.",
+    content: [
+      {
+        heading: "Why burnout requires more than rest",
+        body: "Burnout is a physiological state — not just a mood. It involves dysregulation of the HPA axis, chronically elevated cortisol, and often a disrupted sleep architecture. Simply lying on a beach for a week doesn't address any of this. What does help is structured nervous system repair: consistent daily movement (not intense exercise), breathwork, sleep prioritisation, and genuine disconnection from the stimuli that triggered burnout in the first place. A curated retreat creates these conditions deliberately."
+      },
+      {
+        heading: "What to look for in a burnout recovery retreat",
+        body: "Not all yoga retreats are appropriate for burnout recovery. Avoid retreats that front-load intense Ashtanga or Vinyasa — these can aggravate an already-taxed adrenal system. Instead, look for retreats that lead with Yin yoga, Yoga Nidra, somatic movement, and Restorative practices. A high digital detox score matters enormously: you need real disconnection to allow the prefrontal cortex to genuinely down-regulate. Look for retreats that actively discourage phone use, offer Wi-Fi-free days, and structure the daily schedule around rest rather than achievement."
+      },
+      {
+        heading: "Turkey's burnout retreats: what makes them effective",
+        body: "Turkey offers several conditions that make burnout recovery retreats particularly effective. The Mediterranean diet — rich in omega-3s, polyphenols, and anti-inflammatory foods — naturally supports nervous system regulation. The long sunlight hours (and their effect on melatonin) support sleep rhythm reset. And Turkey's hammam tradition provides a deeply restorative parasympathetic activation that most burnout sufferers haven't experienced in months. Our curated burnout-appropriate retreats all score above 7 on our Sleep Recovery and Digital Detox dimensions."
+      },
+      {
+        heading: "Signs a retreat is helping (and when to go home early)",
+        body: "In the first 24–48 hours of a genuine burnout retreat, many guests feel worse — a phenomenon sometimes called 'unwinding'. The body has been in chronic sympathetic activation, and the removal of adrenaline triggers can feel disorienting. This is normal and expected. By day 3–4, most guests begin sleeping more deeply and reporting reduced mental chatter. By day 6–7, the characteristic emotional clarity of genuine recovery begins to emerge. If you're not feeling any shift by day 4, talk to your retreat facilitator — a schedule adjustment or additional 1:1 session can often help."
+      }
+    ],
+    faqs: [
+      {
+        question: "How long should a burnout recovery retreat be?",
+        answer: "Seven days is the minimum effective length for burnout recovery — five days simply isn't enough time for the nervous system to genuinely down-regulate. Ten to fourteen days is ideal for moderate-to-severe burnout. If you're coming from a high-pressure job, allow at least 2–3 days of 'arrival turbulence' before expecting to feel the benefits."
+      },
+      {
+        question: "Can I do a burnout retreat if I'm still on antidepressants?",
+        answer: "Yes, in most cases. However, disclose your medication to the retreat facilitator before booking. Some intensive breathwork practices (Holotropic, Rebirthing) are contraindicated with certain SSRIs. Yin yoga, Nidra, and somatic movement are generally safe for anyone on standard antidepressant therapy."
+      },
+      {
+        question: "Will I be expected to socialise during a burnout retreat?",
+        answer: "Good burnout retreats don't require socialisation. Group meals are typical but optional, and most well-designed programs include significant solo time, nature walks, and journaling. Check the retreat programme carefully — social energy scores can help you gauge how much group interaction is expected."
+      }
+    ],
+    author: {
+      name: "Maya Elif",
+      role: "Wellness Travel Editor",
+      bio: "Maya is a certified yoga teacher and wellness travel writer who has attended over 40 retreats across Turkey, Bali, and Portugal."
+    },
+    publishedAt: "2026-04-01",
+    readTime: 9,
+    category: "Wellbeing",
+    tags: ["burnout recovery", "yoga retreat", "nervous system reset", "digital detox", "restorative yoga"],
+    coverImage: "/images/retreat-7.svg",
+    featured: true
+  },
+  {
+    slug: "best-solo-womens-retreats-turkey",
+    title: "Best Solo Women's Retreats in Turkey (2026)",
+    metaDescription:
+      "Travelling alone as a woman? These curated solo-female-friendly yoga retreats in Turkey offer safety, sisterhood, and transformative experiences.",
+    excerpt:
+      "Solo travel as a woman requires different planning. Turkey's best women's retreats are safe, warm, and create the kind of genuine community that solo travellers crave without forcing it.",
+    content: [
+      {
+        heading: "Is Turkey safe for solo female travellers?",
+        body: "Turkey's safety record for women travellers varies significantly by region and context. The resort areas of Antalya, Bodrum, Fethiye, and Cappadocia — where the vast majority of our retreats are located — are generally considered very safe and have established track records of hosting international female travellers. Organised retreat settings add an additional layer of security: you're embedded in a structured community with a responsible host, a clear daily schedule, and an established relationship with local services. All our Solo Female Safe-rated retreats have been specifically reviewed for solo female comfort, not simply assumed to be safe because they're retreats."
+      },
+      {
+        heading: "What makes a retreat genuinely solo-female-friendly",
+        body: "Beyond basic safety, solo-friendly retreats for women offer specific qualities: a female teacher or at least a co-facilitated teaching team; accommodation that doesn't require you to walk alone through unlit areas at night; dining that accommodates solo guests without awkwardness; and a host who actively creates community without forcing it. The best women's retreats in Turkey also understand the specific rhythms of female physiology — they offer moon cycle-aware scheduling, hormone-supportive nutrition, and emotional holding practices that go beyond a standard yoga programme."
+      },
+      {
+        heading: "Top retreat types for solo women in Turkey",
+        body: "Women's yoga and wellbeing retreats: specifically designed for women, often women-only. These offer the deepest community experience and the most tailored programming. Solo-friendly mixed retreats: not women-only, but with a strong track record of solo female guests and a facilitated community culture. Luxury single-supplement-waived retreats: some premium retreats waive the solo supplement — worth checking explicitly. Silent or semi-silent retreats: paradoxically excellent for solo travellers, as the shared silence creates connection without the pressure of conversation."
+      },
+      {
+        heading: "Practical solo travel tips for Turkey retreats",
+        body: "Book transfers from the retreat directly — don't attempt to arrange your own transport for late-night arrivals in unfamiliar areas. Arrive a day early in the nearest city if possible: Antalya, Bodrum, and Istanbul all have excellent solo-female-friendly boutique hotels. WhatsApp is the standard communication tool for Turkish retreats — get your host's number before travelling. Learn 5–10 words of Turkish: the warmth you receive when you make even a small linguistic effort is disproportionate and genuinely lovely."
+      }
+    ],
+    faqs: [
+      {
+        question: "Are there women-only retreats in Turkey?",
+        answer: "Yes. Several of our curated retreats are designed exclusively for women. These offer the most contained and community-focused experience. Others are mixed but have strong solo female guest communities — look for the Solo Female Safe trust badge in our listings."
+      },
+      {
+        question: "What's the solo supplement situation in Turkey?",
+        answer: "Solo supplements (extra charge for single room occupancy) vary widely. Budget retreats often waive them. Mid-range retreats typically charge 20–40% extra. Luxury retreats sometimes include them in the base price. Always ask explicitly before booking."
+      },
+      {
+        question: "What should I wear at a yoga retreat in Turkey as a woman?",
+        answer: "Within the retreat property, standard yoga/activewear is perfectly appropriate. When visiting local villages or markets, modest dress (covered shoulders, knee-length or longer) is respectful and will be appreciated. Turkish resorts are relaxed, but conservative regions like Cappadocia warrant slightly more modest off-site clothing."
+      }
+    ],
+    author: {
+      name: "Can Yilmaz",
+      role: "Turkey Destination Specialist",
+      bio: "Can grew up in Izmir and has spent 15 years guiding international travellers through Turkey's wellness destinations. He leads our destination research and host vetting programme."
+    },
+    publishedAt: "2026-04-15",
+    readTime: 8,
+    category: "Solo Travel",
+    tags: ["solo women travel", "women's yoga retreat", "Turkey solo travel", "Solo Female Safe"],
+    coverImage: "/images/retreat-2.svg",
+    featured: false
+  },
+  {
+    slug: "are-wellness-retreats-worth-it",
+    title: "Are Wellness Retreats Actually Worth It? An Honest Assessment",
+    metaDescription:
+      "The wellness retreat industry is worth billions. But do retreats actually work? We look at the evidence, the caveats, and how to make sure yours is genuinely worthwhile.",
+    excerpt:
+      "Wellness retreats are expensive. The question of whether they're 'worth it' depends on what you're optimising for — and whether you choose the right one for your specific needs.",
+    content: [
+      {
+        heading: "What does 'worth it' actually mean?",
+        body: "The value of a wellness retreat isn't easily captured by a cost-per-hour calculation. You're paying for structured conditions: a curated daily rhythm you couldn't impose on yourself at home, expert guidance you couldn't access on YouTube, genuine disconnection from the stimuli your home environment constantly delivers, and a community of like-minded people who normalise the pursuit of wellbeing. The question isn't whether these things are expensive — they are. The question is whether the alternative (staying home, muddling through, maybe doing a yoga video twice a week) is actually cheaper when measured in years of low-grade functioning."
+      },
+      {
+        heading: "What the evidence says",
+        body: "The academic literature on retreat effects is growing. Studies on meditation retreats consistently show significant reductions in perceived stress, anxiety, and depression scores — with effects that persist 3–6 months post-retreat in many participants. Yoga retreat studies show improvements in cortisol regulation, sleep quality, and inflammatory markers. The caveat: effect sizes vary enormously based on programme quality and individual factors. A retreat that isn't well-matched to your needs will produce smaller, shorter-lasting effects than one that is. This is why our AI matching tool focuses on fit dimensions, not just preference."
+      },
+      {
+        heading: "When retreats don't work",
+        body: "Retreats fail to deliver lasting value in predictable circumstances: when you return to an unchanged environment that immediately re-triggers the patterns the retreat was designed to interrupt; when the retreat was chosen for novelty rather than fit; when no integration practices (journaling, continued yoga, community connection) are maintained post-retreat; or when the retreat was simply not well-designed for the outcome you were seeking. The hard truth is that a retreat is an intervention, not a cure. Like any intervention, its effectiveness depends on what comes before and after it."
+      },
+      {
+        heading: "How to make your retreat worth it",
+        body: "Choose fit over aesthetics. A beautiful property with the wrong programme for your needs will deliver less value than a modest property with exactly the right teaching. Define your outcome before you book. 'Relax' is too vague. 'Sleep through the night without anxiety' or 'break the email habit for long enough to reset my dopamine baseline' are actionable goals a retreat can address. Build post-retreat practices before you leave. The integration phase begins on your last day, not when you land back home. Commit to 6 weeks of post-retreat journaling, yoga, or community practice."
+      }
+    ],
+    faqs: [
+      {
+        question: "How much should I expect to pay for a quality yoga retreat?",
+        answer: "A genuinely high-quality yoga retreat in Turkey ranges from $900 for a 5-night budget option to $3,200+ for a 7-night luxury experience. The sweet spot for quality-to-cost ratio is typically $1,200–$1,800 for a 7-night retreat — enough budget to attract experienced teachers and quality facilities without the diminishing returns of ultra-luxury pricing."
+      },
+      {
+        question: "How long should a retreat be to see real benefits?",
+        answer: "For stress and burnout: 7 nights minimum. For deepening practice: 5 nights can be effective. For significant lifestyle change or addiction recovery work: 10–14 nights. Anything under 4 nights is more of a reset than a retreat — valuable, but limited in its lasting impact."
+      },
+      {
+        question: "How do I know if a retreat will actually be good quality?",
+        answer: "Look for: documented teacher credentials (not just 'certified'); genuine guest reviews with specific detail (not generic 5-star praise); a clear programme with named practices (not 'daily yoga and meditation'); explicit inclusions and exclusions; and a host who responds to pre-booking questions with substance, not just sales language. Our trust badge system codifies most of these checks for retreats in our collection."
+      }
+    ],
+    author: {
+      name: "Maya Elif",
+      role: "Wellness Travel Editor",
+      bio: "Maya is a certified yoga teacher and wellness travel writer who has attended over 40 retreats across Turkey, Bali, and Portugal."
+    },
+    publishedAt: "2026-05-01",
+    readTime: 11,
+    category: "Planning",
+    tags: ["wellness retreat value", "yoga retreat effectiveness", "retreat ROI", "are retreats worth it"],
+    coverImage: "/images/retreat-5.svg",
+    featured: false
+  },
+  {
+    slug: "turkey-vs-bali-yoga-retreat",
+    title: "Turkey vs Bali for a Yoga Retreat: An Honest Comparison",
+    metaDescription:
+      "Choosing between a yoga retreat in Turkey and Bali? We compare both destinations across cost, quality, travel time, safety, and spiritual depth.",
+    excerpt:
+      "Bali has long been the default 'yoga retreat' destination in the Western imagination. But Turkey is quietly surpassing it on several important dimensions. Here's a genuinely honest comparison.",
+    content: [
+      {
+        heading: "Travel time and accessibility",
+        body: "For European and Middle Eastern travellers, Turkey is incomparably more accessible than Bali. London to Antalya is 3.5 hours. London to Bali is 16–19 hours with one or two connections. For Americans on the East Coast, Turkey is 10–12 hours (Istanbul); Bali is 20–24 hours. For Australians, Bali wins decisively — it's 6 hours from Sydney versus 16+ hours to Turkey. If you're recovering from burnout or have limited leave, the reduced travel stress of a Turkey retreat is not trivial."
+      },
+      {
+        heading: "Cost comparison",
+        body: "Turkey offers significantly better value than Bali at comparable quality levels — and the gap is widening as Bali's tourism infrastructure costs have risen sharply since 2022. A high-quality 7-night yoga retreat in Turkey typically costs $1,200–$2,200. The equivalent quality in Bali runs $1,600–$3,000. Flights to Turkey from Europe cost $80–$250 return. Bali flights from Europe are $600–$1,200. Combined trip cost for a European traveller: Turkey $1,400–$2,500, Bali $2,200–$4,200. The gap is significant."
+      },
+      {
+        heading: "Teaching quality and style",
+        body: "Bali's retreat scene is vast and heterogeneous — spanning world-class teachers and tourist-trap basics. Turkey's is smaller but more consistently curated. Turkish retreats tend to attract serious European practitioners and teachers with substantial Iyengar, Ashtanga, or somatic lineages. Bali has more Vinyasa, Ecstatic Dance, and spiritual ceremony integration. If your practice is rooted in classical Indian traditions, Turkey's teachers are often better matched. If you're drawn to Balinese ceremony, shamanic practices, or jungle-rooted spirituality, Bali offers things Turkey doesn't."
+      },
+      {
+        heading: "The spiritual dimension",
+        body: "Bali's spiritual culture — its Hindu temple traditions, daily offerings, and community ritual life — genuinely infuses many retreats there in ways that are hard to replicate elsewhere. Turkey's spiritual depth is different but real: Ottoman Sufi traditions, Byzantine sacred sites, and an Anatolian sense of hospitality that has its own quality of grace. Cappadocia in particular carries a spiritual atmosphere — underground churches, fairy-chimneys, and a silence that seeps into practice naturally. It's a different kind of sacred, but no less genuine."
+      },
+      {
+        heading: "The verdict",
+        body: "For European travellers seeking high-quality, evidence-based yoga practice, exceptional food, natural beauty, and genuinely good value: Turkey is the better choice in 2026. For Australians, Southeast Asian-based travellers, or those drawn specifically to Balinese spiritual culture: Bali remains the stronger choice. For Americans: it depends heavily on your starting location and what you're seeking. Both destinations can deliver transformative experiences — the difference is in fit, not absolute quality."
+      }
+    ],
+    faqs: [
+      {
+        question: "Is Turkey safer than Bali for solo female travellers?",
+        answer: "In established retreat contexts, both destinations are comparably safe. Turkey's resort areas (Antalya, Bodrum, Fethiye, Cappadocia) have long track records of hosting international female travellers safely. Bali's Ubud and Canggu areas are equally established. Both require standard solo travel awareness; neither is particularly high-risk in structured retreat settings."
+      },
+      {
+        question: "Does Turkey have good vegetarian and vegan food for retreats?",
+        answer: "Yes — Turkey's cuisine is naturally plant-forward. Mezze culture, olive oil cooking, legume-based dishes, and abundant fresh produce make Turkey exceptional for plant-based eating. Many retreats serve exclusively vegetarian or vegan menus. This is one area where Turkey actually outperforms Bali for variety and quality of local produce."
+      },
+      {
+        question: "Can I extend a Turkey retreat into a broader holiday?",
+        answer: "Absolutely — this is one of Turkey's greatest advantages. After your retreat, Istanbul is one of the world's great cities, Ephesus and Pamukkale are extraordinary ancient sites, and the coast offers brilliant sailing, hiking, and food culture. A typical extension adds 3–5 days and costs relatively little given Turkey's internal transport infrastructure."
+      }
+    ],
+    author: {
+      name: "Can Yilmaz",
+      role: "Turkey Destination Specialist",
+      bio: "Can grew up in Izmir and has spent 15 years guiding international travellers through Turkey's wellness destinations."
+    },
+    publishedAt: "2026-05-15",
+    readTime: 10,
+    category: "Destination Guides",
+    tags: ["Turkey vs Bali", "yoga retreat comparison", "best yoga destination", "Bali alternative"],
+    coverImage: "/images/retreat-1.svg",
+    featured: true
   }
 ];
