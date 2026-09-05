@@ -52,7 +52,10 @@ export function Footer() {
           <Link href="/blog" className="block hover:text-stone-900">Blog</Link>
           <Link href="/guides" className="block hover:text-stone-900">Guides</Link>
           <Link href="/match" className="block hover:text-stone-900">AI Concierge</Link>
-          <Link href="/hosts" className="block hover:text-stone-900">Host with us</Link>
+          <Link href="/host-a-yoga-retreat-in-turkey" className="block hover:text-stone-900">
+            Host a Yoga Retreat in Turkey
+          </Link>
+          <Link href="/hosts" className="block hover:text-stone-900">List your venue</Link>
         </div>
 
         <div className="space-y-2 text-sm text-stone-700">

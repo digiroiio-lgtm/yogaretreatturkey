@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog",
     "/guides",
     "/match",
+    "/host-a-yoga-retreat-in-turkey",
     "/hosts",
     "/about",
     "/contact",

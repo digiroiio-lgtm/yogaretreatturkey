@@ -5,17 +5,18 @@ import { AffiliateButton } from "@/components/ui/affiliate-button";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { BlogCard } from "@/components/blog/blog-card";
-import { getFeaturedRetreats } from "@/lib/retreats";
+import { getFeaturedRetreats, formatPrice } from "@/lib/retreats";
+import { retreats } from "@/lib/data/retreats";
 import { getFeaturedPosts } from "@/lib/blog";
 import { CITIES, CATEGORIES, RETREAT_TYPES } from "@/lib/constants";
 import { MapPin, Star } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Yoga Retreat Turkey | Best Turkish Yoga & Wellness Retreats 2026",
+  title: "Yoga Retreat Turkey | Best Turkish Yoga & Wellness Retreats 2026/2027",
   description:
-    "Find the best yoga retreats in Turkey for 2026 — luxury Aegean villas, spiritual Cappadocia experiences, detox programs, and women's sanctuaries. 4.7 stars, 2,300+ reviews.",
+    "Compare the best yoga retreats in Turkey for 2026/2027 — Fethiye, Antalya, Bodrum, Kaş and Cappadocia. Verified prices, airport transfer times and season windows.",
   openGraph: {
-    title: "Yoga Retreat Turkey | Curated Wellness Stays 2026",
+    title: "Yoga Retreat Turkey | Curated Wellness Stays 2026/2027",
     description:
       "Luxury yoga retreats across Turkey's finest destinations. AI-matched, verified, and curated.",
     type: "website"
@@ -27,12 +28,12 @@ const faqs = [
   {
     question: "What is the best time of year for a yoga retreat in Turkey?",
     answer:
-      "May, June, September, and October offer ideal weather — warm temperatures, fewer crowds, and golden light. July and August are peak season with higher demand; book 3–4 months ahead."
+      "April to June and September to November are the strongest windows: mid-20s°C, fewer crowds and lower prices. July and August are hot and busy on the Aegean and Mediterranean coasts. Cappadocia's cave venues run year-round."
   },
   {
     question: "How much do yoga retreats in Turkey cost?",
     answer:
-      "Prices range from approximately $1,200 for a 4-night stay to $3,200+ for a 7-night luxury villa experience. The average is $1,600–$2,000 for 5–7 nights including meals and accommodation."
+      "Across the wider market, Turkey yoga retreats start from roughly $305 for short budget stays and run past $3,000 for luxury programmes. The curated retreats listed here range from $1,320 to $3,200 per person for 4–10 nights, with most 5–7 night stays landing between $1,650 and $2,450 including accommodation, meals and daily yoga."
   },
   {
     question: "Are yoga retreats in Turkey suitable for beginners?",
@@ -47,7 +48,33 @@ const faqs = [
   {
     question: "Is it safe to attend a yoga retreat in Turkey as a solo female traveller?",
     answer:
-      "Yes. Turkey's main retreat regions — Antalya, Muğla, and Cappadocia — are well-established tourism areas. Retreat properties provide a community and supported environment."
+      "Yes. Turkey's main retreat regions — Antalya, Fethiye, Bodrum, Kaş and Cappadocia — are well-established tourism areas, and most retreat guests in Turkey travel solo. Retreat properties provide a community and a supported environment."
+  }
+];
+
+// Derived from the live dataset so published price claims can never drift from inventory.
+const priceStats = {
+  min: Math.min(...retreats.map((r) => r.price)),
+  max: Math.max(...retreats.map((r) => r.price)),
+  minNights: Math.min(...retreats.map((r) => r.duration)),
+  maxNights: Math.max(...retreats.map((r) => r.duration))
+};
+
+const priceTiers = [
+  {
+    tier: "Entry level",
+    price: "From ~$305",
+    includes: "Short stays and shared rooms, typically outside our curated selection"
+  },
+  {
+    tier: "Mid-range",
+    price: "$1,300–$2,000",
+    includes: "5–7 nights, private or twin room, full board and twice-daily yoga"
+  },
+  {
+    tier: "Luxury",
+    price: "$2,100–$3,200",
+    includes: "Boutique villas, small groups, spa treatments and airport transfers"
   }
 ];
 
@@ -92,7 +119,7 @@ export default function TurkeyHubPage() {
       <section className="bg-[#f5f0ea] border-b border-stone-200 mt-4">
         <div className="mx-auto w-full max-w-7xl px-4 py-14 md:px-6 md:py-20">
           <p className="text-xs uppercase tracking-[0.25em] text-stone-500">
-            Turkey · 2026 Season
+            Turkey · 2026/2027 Season
           </p>
           <h1 className="mt-2 text-4xl font-semibold tracking-tight text-stone-900 md:text-5xl lg:text-6xl">
             Yoga Retreats in Turkey
@@ -127,7 +154,7 @@ export default function TurkeyHubPage() {
         <p className="text-stone-600 mb-8">
           Each region offers a distinct energy, climate, and retreat character.
         </p>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {CITIES.map((city) => (
             <Link
               key={city.slug}
@@ -139,6 +166,9 @@ export default function TurkeyHubPage() {
                 <p className="text-lg font-medium text-stone-900">{city.name}</p>
               </div>
               <p className="text-sm text-stone-500 leading-relaxed">{city.description}</p>
+              <p className="mt-3 text-xs text-stone-500">
+                {city.nearestAirport} · {city.transferTime} transfer · {city.season}
+              </p>
               <div className="mt-4 grid gap-1">
                 {RETREAT_TYPES.slice(0, 3).map((type) => (
                   <Link
@@ -152,6 +182,59 @@ export default function TurkeyHubPage() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="border-t border-stone-200">
+        <div className="mx-auto w-full max-w-4xl px-4 py-14 md:px-6">
+          <h2 className="text-2xl font-semibold text-stone-900">
+            How much does a yoga retreat in Turkey cost?
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed text-stone-700">
+            The curated retreats on this site run{" "}
+            <strong>
+              {formatPrice(priceStats.min, "USD")}–{formatPrice(priceStats.max, "USD")} per person
+            </strong>{" "}
+            for {priceStats.minNights}–{priceStats.maxNights} nights, including accommodation,
+            meals and daily yoga. Across the wider market, short budget stays in Turkey start from
+            around <strong>$305</strong>. Turkey remains cheaper than comparable Mediterranean
+            retreat destinations, and shoulder-season dates in April, May, October and November
+            carry the lowest rates.
+          </p>
+
+          <div className="mt-8 overflow-x-auto">
+            <table className="w-full min-w-[560px] border-collapse text-left text-sm">
+              <caption className="sr-only">
+                Yoga retreat price tiers in Turkey by budget level
+              </caption>
+              <thead>
+                <tr className="border-b border-stone-300">
+                  <th scope="col" className="py-3 pr-4 font-semibold text-stone-900">Tier</th>
+                  <th scope="col" className="py-3 pr-4 font-semibold text-stone-900">
+                    Typical price
+                  </th>
+                  <th scope="col" className="py-3 font-semibold text-stone-900">
+                    What you get
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {priceTiers.map((tier) => (
+                  <tr key={tier.tier} className="border-b border-stone-200 align-top">
+                    <th scope="row" className="py-3 pr-4 font-medium text-stone-800">
+                      {tier.tier}
+                    </th>
+                    <td className="py-3 pr-4 text-stone-900">{tier.price}</td>
+                    <td className="py-3 text-stone-600">{tier.includes}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-stone-500">
+            Prices are per person and shown in USD. Entry-level figures reflect the wider retreat
+            market; the mid-range and luxury bands reflect retreats listed on this site.
+          </p>
         </div>
       </section>
 
@@ -207,6 +290,25 @@ export default function TurkeyHubPage() {
           </div>
         </section>
       )}
+
+      <section className="border-t border-stone-200 bg-[#f5f0ea]">
+        <div className="mx-auto w-full max-w-7xl px-4 py-12 md:px-6">
+          <h2 className="text-2xl font-semibold text-stone-900">
+            Leading your own retreat in Turkey?
+          </h2>
+          <p className="mt-3 max-w-2xl text-stone-600">
+            Yoga teachers and retreat organisers can compare venue regions by capacity, practice
+            space, airport transfer time and season window — plus the budget benchmarks that
+            decide whether a retreat turns a profit.
+          </p>
+          <Link
+            href="/host-a-yoga-retreat-in-turkey"
+            className="mt-5 inline-flex items-center rounded-full bg-stone-900 px-8 py-4 text-base font-medium text-white transition hover:bg-stone-700"
+          >
+            Host a Yoga Retreat in Turkey →
+          </Link>
+        </div>
+      </section>
 
       <section className="mx-auto w-full max-w-4xl px-4 py-14 md:px-6">
         <h3 className="text-2xl font-semibold text-stone-900 mb-8 text-center">

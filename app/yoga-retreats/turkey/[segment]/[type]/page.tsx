@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!city || !retreatType) return { title: "Not Found" };
 
   return {
-    title: `${retreatType.name} in ${city.name}, Turkey | 2026 Guide`,
+    title: `${retreatType.name} in ${city.name}, Turkey | 2026/2027 Guide`,
     description: `Find the best ${retreatType.name.toLowerCase()} in ${city.name}, Turkey. Verified retreats, transparent pricing, and AI-matched recommendations. Free cancellation options.`,
     alternates: { canonical: `/yoga-retreats/turkey/${segment}/${type}` }
   };

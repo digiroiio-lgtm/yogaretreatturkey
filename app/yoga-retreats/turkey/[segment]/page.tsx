@@ -33,13 +33,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { type, data } = found;
   if (type === "city") {
     return {
-      title: `Yoga Retreats in ${data.name}, Turkey | 2026 Curated Guide`,
+      title: `Yoga Retreats in ${data.name}, Turkey | 2026/2027 Curated Guide`,
       description: `Discover the best yoga retreats in ${data.name}, Turkey. ${data.description} Verified reviews, free cancellation, AI-matched recommendations.`,
       alternates: { canonical: `/yoga-retreats/turkey/${segment}` }
     };
   }
   return {
-    title: `${data.name} in Turkey | Curated Yoga Retreats 2026`,
+    title: `${data.name} in Turkey | Curated Yoga Retreats 2026/2027`,
     description: `Browse curated ${data.name.toLowerCase()} in Turkey. ${data.description} Verified reviews, transparent pricing, and expert curation.`,
     alternates: { canonical: `/yoga-retreats/turkey/${segment}` }
   };
@@ -87,11 +87,11 @@ export default async function SegmentPage({ params }: Props) {
       ? [
           {
             question: `When is the best time to visit ${data.name} for a yoga retreat?`,
-            answer: `${data.name} retreats run predominantly April through October. ${segment === "cappadocia" ? "Spring and autumn offer the most comfortable temperatures and clearest balloon-flight conditions." : "May, June, September, and October offer the perfect balance of warmth and availability."}`
+            answer: `The ${data.name} retreat season runs ${(data as (typeof CITIES)[number]).season}. ${segment === "cappadocia" ? "Spring and autumn offer the most comfortable temperatures and the clearest balloon-flight conditions." : "May, June, September, and October give you mid-20s°C temperatures, thinner crowds and lower prices than the July–August peak."}`
           },
           {
             question: `How do I get to ${data.name} for a yoga retreat?`,
-            answer: `${segment === "antalya" ? "Antalya Airport (AYT) has direct international connections from major European cities." : segment === "cappadocia" ? "Fly to Kayseri (ASR) or Nevşehir (NAV) airport, or take the overnight bus from Istanbul." : "Fly to Dalaman (DLM) or Bodrum-Milas (BJV) airport depending on your exact destination."}`
+            answer: `Fly into ${(data as (typeof CITIES)[number]).nearestAirport}. The transfer to most ${data.name} retreat venues takes ${(data as (typeof CITIES)[number]).transferTime}. Many retreats include airport pickup — check the inclusions list on each listing before booking a separate transfer.`
           },
           {
             question: `What types of yoga retreats are available in ${data.name}?`,
@@ -166,6 +166,28 @@ export default async function SegmentPage({ params }: Props) {
             {pageTitle}
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-stone-600">{data.description}</p>
+          {type === "city" && (
+            <dl className="mt-6 grid max-w-3xl gap-x-8 gap-y-3 text-sm sm:grid-cols-3">
+              <div>
+                <dt className="text-stone-500">Nearest airport</dt>
+                <dd className="font-medium text-stone-900">
+                  {(data as (typeof CITIES)[number]).nearestAirport}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-stone-500">Airport transfer</dt>
+                <dd className="font-medium text-stone-900">
+                  {(data as (typeof CITIES)[number]).transferTime}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-stone-500">Retreat season</dt>
+                <dd className="font-medium text-stone-900">
+                  {(data as (typeof CITIES)[number]).season}
+                </dd>
+              </div>
+            </dl>
+          )}
           <div className="mt-6 flex flex-wrap gap-3">
             <AffiliateButton label={`Book a ${type === "city" ? cityName : categoryName} Retreat`} size="lg" />
             <Link
@@ -213,6 +235,26 @@ export default async function SegmentPage({ params }: Props) {
                 </Link>
               ))}
             </div>
+          </div>
+        </section>
+      )}
+
+      {type === "city" && (
+        <section className="border-t border-stone-200 bg-[#f5f0ea]">
+          <div className="mx-auto w-full max-w-7xl px-4 py-10 md:px-6">
+            <h2 className="text-lg font-semibold text-stone-900">
+              Leading a retreat rather than joining one?
+            </h2>
+            <p className="mt-2 max-w-2xl text-sm text-stone-600">
+              Yoga teachers and retreat organisers hiring a venue in {data.name} can compare
+              capacity, practice spaces, transfer times and group pricing in our hosting guide.
+            </p>
+            <Link
+              href="/host-a-yoga-retreat-in-turkey"
+              className="mt-4 inline-flex items-center rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-stone-700"
+            >
+              Host a yoga retreat in Turkey →
+            </Link>
           </div>
         </section>
       )}
